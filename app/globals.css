@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Raleway:wght@300&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +7,10 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --swiper-theme-color: #5B9852!important;
+  --swiper-pagination-bullet-inactive-color: #fff!important;
+  --swiper-pagination-bullet-inactive-opacity: 1!important;
+  --swiper-pagination-bullet-size: 13px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +22,19 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-weight: 300;
+  font-size: 15px;
 }
+.swiper-pagination-bullet {
+  border: 1px solid #1D1D1D;
+}
+
+/*body {*/
+/*  color: rgb(var(--foreground-rgb));*/
+/*  background: linear-gradient(*/
+/*      to bottom,*/
+/*      transparent,*/
+/*      rgb(var(--background-end-rgb))*/
+/*    )*/
+/*    rgb(var(--background-start-rgb));*/
+/*}*/

@@ -6,13 +6,15 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    colors: {
+      'primary-light': '#D3EDCC',
+      'primary': '#5B9852',
+      'white': '#fff',
+      'dark': '#1D1D1D'
     },
+    fontFamily: {
+      'heading': "DM Serif Display"
+    }
   },
   plugins: [],
 }

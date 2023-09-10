@@ -4,11 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5360ffc8-eb3a-49f5-96dd-1691d17d46e8" name="Changes" comment="" />
+    <list default="true" id="5360ffc8-eb3a-49f5-96dd-1691d17d46e8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MainBanner.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MainBanner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/VerticalText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/VerticalText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/CardCategory.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/CardCategory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/CardSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/CardSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/BannerSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/BannerSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/BusinessSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/BusinessSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sections/MissionSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sections/MissionSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/slide-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/slide-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,15 +53,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/mac/work/new_project/aresto",
+    "last_opened_file_path": "/Users/mac/work/new_project/aresto/public/img",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/img" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694113828974</updated>
       <workItem from="1694113830488" duration="803000" />
+      <workItem from="1694186351822" duration="29798000" />
     </task>
     <servers />
   </component>
