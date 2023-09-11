@@ -2,6 +2,7 @@ import Image from 'next/image'
 import MissionSection from "@/components/sections/MissionSection"
 import BannerSection from "@/components/sections/BannerSection"
 import BusinessSection from "@/components/sections/BusinessSection"
+import CounterSection from "@/components/sections/CounterSection"
 import Header from "@/components/Header"
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
               </div>
               <MissionSection />
               <BusinessSection />
+              <CounterSection />
           </main>
       </div>
   )

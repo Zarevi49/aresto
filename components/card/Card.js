@@ -2,6 +2,7 @@
 import { useState } from "react";
 import CardSlider from "@/components/card/CardSlider"
 import CardCategory from "@/components/card/CardCategory"
+import Button from "@/components/Button";
 
 const Card = ({
     data,
@@ -53,6 +54,9 @@ const Card = ({
                         )}
                     </div>
                 )}
+                <div className="mt-5 md:mt-[23px]">
+                    <Button link="#" text="kontakt" showArrow={true} accent={true} />
+                </div>
             </div>
         </div>
     )

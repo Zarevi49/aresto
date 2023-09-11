@@ -11,10 +11,10 @@ const Header = () => {
             <div className="header__logo flex items-center justify-center order-2 mb-[39px] md:mb-0">
                 <img className="w-[148px] h-[48.94px]" src="/img/logo.svg" alt="Logo" />
             </div>
-            <div className="header__btns flex items-center justify-center md:justify-end order-1 md:order-2 mx-[-2px] md:mb-0 mb-[17px]">
-                <Button text="kontakt" />
+            <div className="header__btns flex gap-2 items-center justify-center md:justify-end order-1 md:order-2 md:mb-0 mb-[17px]">
+                <Button link="#" text="kontakt"/>
                 <ButtonPhone text="+352 26 17 73 1" />
-                <LanguageDropdown selectedLang="De" />
+                <LanguageDropdown text="De" accent={true}/>
             </div>
         </div>
     )
