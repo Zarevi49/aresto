@@ -1,5 +1,6 @@
 import VerticalText from "@/components/VerticalText"
 import Card from "@/components/card/Card"
+import Image from "next/image"
 
 const BusinessSection = () => {
     const card_data = [
@@ -24,11 +25,10 @@ const BusinessSection = () => {
             ]
         }
     ]
-    console.log(card_data)
     return (
-        <div className="bg-primary-light w-full">
-            <div className="w-full max-w-[1400px] mx-auto relative px-5 pt-[50px] md:pt-[146px] md:pb-[460px]">
-                <VerticalText text={"our business lines"} />
+        <div className="bg-primary-light md:bg-gradient-primary-light w-full relative">
+            <div className="w-full max-w-[1400px] mx-auto relative px-5 pt-[50px] md:pt-[146px] md:pb-[0px] pb-[120px]">
+                <VerticalText text={"our business lines"} top={"top-[40%]"} />
                 <div className="grid flex-wrap max-w-[1045px] w-full mx-auto">
                     {card_data.map((item, index) => {
                         return (
@@ -36,10 +36,14 @@ const BusinessSection = () => {
                                 key={index + 1}
                                 data={item}
                                 reverse={(index + 1) % 2 === 0}
+                                mb={(index + 1) !== card_data.length ? "md:mb-[90px] mb-[50px]" : ""}
                             />
                         )}
                     )}
                 </div>
+            </div>
+            <div className="absolute right-[16px] md:right-[5%] md:bottom-[20%] -bottom-[16px]">
+                <Image src={"/img/Illustration.svg"} alt={"fd"} width={223} height={109} className="w-[176px] h-[91px] md:w-[223px] md:h-[109px]" />
             </div>
         </div>
     )
