@@ -54,9 +54,11 @@ const Card = ({
                         )}
                     </div>
                 )}
-                <div className="mt-5 md:mt-[23px]">
-                    <Button link="#" text="kontakt" showArrow={true} accent={true} />
-                </div>
+                {data.button && (
+                    <div className="mt-5 md:mt-[23px]">
+                        <Button link={data.button.link} text={data.button.text} showArrow={true} accent={true} />
+                    </div>
+                )}
             </div>
         </div>
     )
