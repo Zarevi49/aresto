@@ -14,6 +14,9 @@ module.exports = {
     },
     fontFamily: {
       'heading': "DM Serif Display"
+    },
+    backgroundImage: {
+      'gradient-primary-light': "linear-gradient(0deg, #fff 22%, #D3EDCC 20%)"
     }
   },
   plugins: [],

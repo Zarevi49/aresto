@@ -1,17 +1,28 @@
+'use client'
+import { useState } from "react";
 import CardSlider from "@/components/card/CardSlider"
 import CardCategory from "@/components/card/CardCategory"
 
 const Card = ({
     data,
-    reverse
+    reverse,
+    mb
 }) => {
-    console.log(data)
     const reverse_padding = reverse ? "md:pt-[48px] md:pr-[46px] md:pb-[43px] md:pl-[57px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]" : "md:pt-[36px] md:pr-[59px] md:pb-[36px] md:pl-[44px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]"
+    // const description = useState(data.description)
+    const [show_read_more, setReadMore] = useState(true)
+    const [description, setDescription] = useState(((data.description).length > 230) ?
+        (((data.description).substring(0,230-3)) + '...') :
+        data.description)
+    const read_more = () => {
+        setDescription(data.description)
+        setReadMore(false)
+    }
     return (
-        <div className={`bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border border-dark flex ${
-            reverse ? "flex-row-reverse" : " justify-self-end"
-        }`}>
-            <div className="max-w-[454px] w-full h-full">
+        <div className={`bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border border-dark flex flex-col md:flex-row ${
+            reverse ? "md:flex-row-reverse" : " justify-self-end"
+        } ${mb}`}>
+            <div className="md:max-w-[48.9%] w-full h-full">
                 <CardSlider
                     images={data.images}
                     slider_per_view={1}
@@ -24,9 +35,14 @@ const Card = ({
                     </h3>
                 )}
                 {data.description && (
-                    <p className="whitespace-pre-line">
-                        {data.description}
-                    </p>
+                    <div>
+                        <p className="whitespace-pre-line">
+                            { description }
+                        </p>
+                        {show_read_more && (data.description).length > 230 && (
+                            <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
+                        )}
+                    </div>
                 )}
                 {data.categories && (
                     <div className="flex flex-wrap mt-[16px]">
