@@ -31,9 +31,9 @@ const Card = ({
             </div>
             <div className={reverse_padding}>
                 {data.title && (
-                    <h3 className="font-heading md:text-[40px] text-[25px] leading-[110%] md:mb-[36px] mb-[5px]">
+                    <h2 className="font-heading md:text-[40px] text-[25px] leading-[110%] md:mb-[36px] mb-[5px]">
                         {data.title}
-                    </h3>
+                    </h2>
                 )}
                 {data.description && (
                     <div>
