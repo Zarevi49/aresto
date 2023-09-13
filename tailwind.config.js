@@ -10,9 +10,11 @@ module.exports = {
       'primary-light': '#D3EDCC',
       'primary': '#5B9852',
       'white': '#fff',
-      'dark': '#1D1D1D'
+      'dark': '#1D1D1D',
+      'yellow': '#E6EBAD'
     },
     fontFamily: {
+      'lato': ['Lato', 'sans-serif'],
       'heading': "DM Serif Display"
     },
     lineHeight: {
@@ -23,7 +25,8 @@ module.exports = {
       '1.3px': '1.3px',
     },
     backgroundImage: {
-      'gradient-primary-light': "linear-gradient(0deg, #fff 22%, #D3EDCC 20%)"
+      'gradient-primary-light': "linear-gradient(0deg, #fff 22%, #D3EDCC 20%)",
+      'gradient-primary-yellow': "linear-gradient(0deg, #fff 26%, #E6EBAD 20%)"
     }
   },
   plugins: [],
