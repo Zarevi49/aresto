@@ -26,7 +26,8 @@ module.exports = {
     },
     backgroundImage: {
       'gradient-primary-light': "linear-gradient(0deg, #fff 22%, #D3EDCC 20%)",
-      'gradient-primary-yellow': "linear-gradient(0deg, #fff 26%, #E6EBAD 20%)"
+      'gradient-primary-yellow': "linear-gradient(0deg, #fff 26%, #E6EBAD 20%)",
+      'gradient-yellow': "linear-gradient(0deg, #fff 9.4%, #E6EBAD 0%)"
     }
   },
   plugins: [],

@@ -5,6 +5,7 @@ import BusinessSection from "@/components/sections/BusinessSection"
 import CounterSection from "@/components/sections/CounterSection"
 import Header from "@/components/Header"
 import SmallCardsSection from "@/components/sections/SmallCardsSection";
+import CertifiedSlider from "@/components/CertifiedSlider";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
               <BusinessSection />
               <CounterSection />
               <SmallCardsSection />
+              <CertifiedSlider />
           </main>
       </div>
   )
