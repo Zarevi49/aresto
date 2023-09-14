@@ -3,11 +3,11 @@ import MissionSection from "@/components/sections/MissionSection"
 import BannerSection from "@/components/sections/BannerSection"
 import BusinessSection from "@/components/sections/BusinessSection"
 import CounterSection from "@/components/sections/CounterSection"
+import ContactFormSection from "@/components/sections/ContactFormSection"
 import Header from "@/components/Header"
 import SmallCardsSection from "@/components/sections/SmallCardsSection";
 import CertifiedSlider from "@/components/CertifiedSlider";
 import CertifiedSection from "@/components/sections/CertifiedSection";
-import ContactFormSection from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
