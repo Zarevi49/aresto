@@ -48,6 +48,9 @@ body {
   width: 45px;
   height: 45px;
 }
+.swiper-button-disabled {
+  opacity: .35;
+}
 /*body {*/
 /*  color: rgb(var(--foreground-rgb));*/
 /*  background: linear-gradient(*/

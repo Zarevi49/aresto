@@ -22,6 +22,7 @@ const Slider = ({
     img_custom_class,
     custom_class,
     loop,
+    breakpoints
 }) => {
     const slides = images
     const full_height_slider = full_height ? "h-full" : ""
@@ -35,6 +36,7 @@ const Slider = ({
             navigation={navigation}
             loop={loop}
             pagination={{ clickable: true, enabled: pagination }}
+            breakpoints={breakpoints}
         >
             {slides.map((item, index) => {
                 return (
