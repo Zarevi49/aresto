@@ -12,7 +12,11 @@ const BusinessSection = () => {
             images: [
                 {src: "/img/slide-1.png"},
                 {src: "/img/slide-2.jpeg"},
-            ]
+            ],
+            button: {
+                link: "/contact",
+                text: "Kontakt"
+            }
         },
         {
             id: 2,
@@ -22,7 +26,11 @@ const BusinessSection = () => {
             images: [
                 {src: "/img/slide-2.jpeg"},
                 {src: "/img/slide-1.png"},
-            ]
+            ],
+            button: {
+                link: "/contact",
+                text: "Kontakt"
+            }
         }
     ]
     return (
@@ -37,6 +45,7 @@ const BusinessSection = () => {
                                 data={item}
                                 reverse={(index + 1) % 2 === 0}
                                 mb={(index + 1) !== card_data.length ? "md:mb-[90px] mb-[50px]" : ""}
+                                button={item.button}
                             />
                         )}
                     )}
