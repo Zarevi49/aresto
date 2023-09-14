@@ -7,6 +7,8 @@ import Header from "@/components/Header"
 import SmallCardsSection from "@/components/sections/SmallCardsSection";
 import CertifiedSlider from "@/components/CertifiedSlider";
 import CertifiedSection from "@/components/sections/CertifiedSection";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -30,6 +32,8 @@ export default function Home() {
               <CertifiedSection
                   title="Make a difference. We are certified."
               />
+              <ContactForm />
+              <Footer />
           </main>
       </div>
   )
