@@ -6,6 +6,7 @@ import CounterSection from "@/components/sections/CounterSection"
 import Header from "@/components/Header"
 import SmallCardsSection from "@/components/sections/SmallCardsSection";
 import CertifiedSlider from "@/components/CertifiedSlider";
+import CertifiedSection from "@/components/sections/CertifiedSection";
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
               <BusinessSection />
               <CounterSection />
               <SmallCardsSection />
-              <CertifiedSlider />
+              <CertifiedSection
+                  title="Make a difference. We are certified."
+              />
           </main>
       </div>
   )

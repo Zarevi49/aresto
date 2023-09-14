@@ -6,7 +6,9 @@ const CardSlider = ({images, slider_per_view}) => {
             images={images}
             // imageSrc={image5.jpeg}
             slider_per_view={slider_per_view}
-            height={true}
+            full_height={true}
+            width={454}
+            height={0}
         />
     )
 }

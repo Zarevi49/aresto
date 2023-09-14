@@ -10,8 +10,8 @@ const BusinessSection = () => {
             description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             categories: ["all industries", ">20 employers", "lorem ipsum", "lorem ipsum", "lorem ipsum"],
             images: [
-                "/img/slide-1.png",
-                "/img/slide-2.jpeg"
+                {src: "/img/slide-1.png"},
+                {src: "/img/slide-2.jpeg"},
             ]
         },
         {
@@ -20,8 +20,8 @@ const BusinessSection = () => {
             description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             categories: ["schools", "crèches", "lorem ipsum", "lorem ipsum", "lorem ipsum"],
             images: [
-                "/img/slide-2.jpeg",
-                "/img/slide-1.png"
+                {src: "/img/slide-2.jpeg"},
+                {src: "/img/slide-1.png"},
             ]
         }
     ]

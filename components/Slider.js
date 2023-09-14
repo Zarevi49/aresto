@@ -10,15 +10,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from "next/image"
 
-const Slider = ({images, navigation, pagination, slider_per_view, height}) => {
+const Slider = ({images, navigation, pagination, slider_per_view, full_height, width, height, space_between, img_custom_class}) => {
     const slides = images
-    const full_height = height ? "h-full" : ""
+    const full_height_slider = full_height ? "h-full" : ""
     return (
         <Swiper
             // install Swiper modules
-            className={full_height}
+            className={full_height_slider}
             modules={[Navigation, Pagination, A11y]}
-            spaceBetween={50}
+            spaceBetween={space_between}
             slidesPerView={slider_per_view}
             navigation={navigation}
             pagination={{ clickable: true, enabled: pagination }}
@@ -29,13 +29,13 @@ const Slider = ({images, navigation, pagination, slider_per_view, height}) => {
                 return (
                     <SwiperSlide key={index}>
                         <Image
-                            src={item}
-                            alt="test"
-                            width={454}
-                            height={0}
-                            className={`w-full h-auto ${full_height} ${
-                                height ? "object-cover" : ""
-                            }`}
+                            src={item.src}
+                            alt={item.alt}
+                            width={width}
+                            height={height}
+                            className={`w-full h-auto ${full_height_slider} ${
+                                full_height ? "object-cover" : ""
+                            } ${img_custom_class}`}
                         />
                     </SwiperSlide>
                     )
