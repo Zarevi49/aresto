@@ -18,6 +18,7 @@ module.exports = {
       'heading': "DM Serif Display"
     },
     lineHeight: {
+      '90': '90%',
       '110': '110%',
       '150': '150%',
     },
