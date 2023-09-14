@@ -7,7 +7,7 @@ import Button from "@/components/Button";
 const Card = ({
     data,
     reverse,
-    mb
+    mb,
 }) => {
     const reverse_padding = reverse ? "md:pt-[48px] md:pr-[46px] md:pb-[43px] md:pl-[57px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]" : "md:pt-[36px] md:pr-[59px] md:pb-[36px] md:pl-[44px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]"
     // const description = useState(data.description)
