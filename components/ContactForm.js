@@ -1,3 +1,5 @@
+import Button from "@/components/Button";
+
 function ContactForm() {
     return (
         <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-2 pt-[60px] pr-[49px] pl-[66px]">
@@ -25,21 +27,20 @@ function ContactForm() {
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="name" className="block mb-2">Name</label>
-                    <input type="text" id="name" className="w-full p-2 border-2 border-dark rounded-full" />
+                    <input type="text" id="name" placeholder="Name" className="w-full p-2 border-2 border-dark rounded-full outline-none" />
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="email" className="block mb-2">Email</label>
-                    <input type="email" id="email" className="w-full p-2 border-2 border-dark rounded-full" />
+                    <input type="email" id="email" placeholder="Email" className="w-full p-2 border-2 border-dark rounded-full outline-none" />
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="message" className="block mb-2">Message</label>
-                    <textarea id="message" className="w-full p-2 border-2 border-dark rounded-[22px]" rows="4"></textarea>
+                    <textarea id="message" placeholder="Message" className="w-full p-2 border-2 border-dark rounded-[22px] outline-none" rows="4"></textarea>
                 </div>
 
-                <button className="py-2 px-4 bg-blue-500 text-white rounded">Submit</button>
+                <div className="mb-4">
+                    <Button link="#" text="Send" showArrow="true" accent="true"/>
+                </div>
             </div>
         </div>
     );
