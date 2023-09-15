@@ -57,3 +57,34 @@ body {
 /*    )*/
 /*    rgb(var(--background-start-rgb));*/
 /*}*/
+
+/* form select animation */
+.options-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.options-list.open {
+  max-height: 800px;
+}
+
+.arrow-rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
+}
+
+/* form svg */
+.form-img {
+  position: relative;
+}
+
+.form-img:after {
+  content:'';
+  position: absolute;
+  top:calc(100% - 32px);
+  left: 54.7%;
+  background-image: url("/img/spoons.svg");
+  width: 162.59px;
+  height: 169.99px;
+}

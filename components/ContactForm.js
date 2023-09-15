@@ -1,8 +1,11 @@
-import Button from "@/components/Button";
+"use client"
+import React, { useState } from 'react'
+import Button from "@/components/Button"
+import CustomSelect from "@/components/CustomSelect"
 
 function ContactForm() {
     return (
-        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-2 pt-[60px] pr-[49px] pb-[26px] pl-[66px]">
+        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-2 pt-[60px] pr-[49px] pb-[26px] pl-[66px] form-img">
             <div className="flex flex-col w-full md:w-1/2">
                 <h2 className="text-[65px] text-dark font-heading leading-90 mb-4 max-w-[271px]">Leave a message</h2>
                 <address className="not-italic mb-4">
@@ -17,25 +20,22 @@ function ContactForm() {
 
             <form className="flex flex-col w-full max-w-[520px]">
                 <div className="mb-[9px]">
-                    <select id="topic" className="w-full border-2 border-dark focus:border-dark rounded-full px-[21px] py-[5px] h-[44px] outline-none placeholder:text-dark text-dark font-normal text-[15px]">
-                        <option value="" disabled selected hidden>Choose a topic</option>
-                        <option value="topic1">Topic 1</option>
-                        <option value="topic2">Topic 2</option>
-                        <option value="topic1">Topic 1</option>
-                        <option value="topic2">Topic 2</option>
-                    </select>
+                    <CustomSelect
+                        options={['Option 1', 'Option 2', 'Option 3']}
+                        onChange={(selected) => console.log(selected)}
+                    />
                 </div>
 
                 <div className="mb-[9px]">
-                    <input type="text" id="name" placeholder="Name" className="w-full px-[25px] py-[7px] border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]" />
+                    <input type="text" id="name" placeholder="Name" className="w-full px-[24px] py-[7px] border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]" />
                 </div>
 
                 <div className="mb-[9px] text-dark">
-                    <input type="email" id="email" placeholder="Email" className="w-full px-[25px] py-[7px] border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]" />
+                    <input type="email" id="email" placeholder="Email" className="w-full px-[24px] py-[7px] border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]" />
                 </div>
 
                 <div className="mb-[22px]">
-                    <textarea id="message" placeholder="Message" className="w-full px-[25px] py-[7px] border-2 border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px]" rows="6"></textarea>
+                    <textarea id="message" placeholder="Message" className="w-full px-[24px] py-[11px] border-2 border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px] resize-none" rows="6"></textarea>
                 </div>
 
                 <div className="text-right">
