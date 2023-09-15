@@ -5,7 +5,7 @@ import CustomSelect from "@/components/CustomSelect"
 
 function ContactForm() {
     return (
-        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-2 pt-[60px] pr-[49px] pb-[26px] pl-[66px] form-img">
+        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-2 pt-[60px] pr-[49px] pb-[48px] md:pb-[26px] pl-[66px] form-img">
             <div className="flex flex-col w-full md:w-1/2">
                 <h2 className="text-[65px] text-dark font-heading leading-90 mb-4 max-w-[271px]">Leave a message</h2>
                 <address className="not-italic mb-4">
