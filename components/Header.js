@@ -12,7 +12,7 @@ const Header = () => {
                 <img className="w-[148px] h-[48.94px]" src="/img/logo.svg" alt="Logo" />
             </div>
             <div className="header__btns flex gap-2 items-center justify-center md:justify-end order-1 md:order-2 md:mb-0 mb-[17px]">
-                <Button link="#" text="kontakt"/>
+                <Button link="/#contact" text="kontakt" />
                 <ButtonPhone text="+352 26 17 73 1" />
                 <LanguageDropdown text="De" accent={true}/>
             </div>

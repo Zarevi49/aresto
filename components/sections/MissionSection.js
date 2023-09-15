@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const MissionSection = () => {
     return (
-        <div className="w-full max-w-[1400px] mx-auto px-5 md:pt-[110px] pt-[58.5px] pb-[170px] md:pb-[84px] relative">
+        <div className="w-full max-w-[1440px] mx-auto px-5 md:pt-[110px] pt-[58.5px] pb-[170px] md:pb-[84px] relative">
             <VerticalText text={"Our mission"} />
             <div className="tw-full max-w-[830px] mx-auto md:mb-10 mb-[29px]">
                 <h1 className="font-heading md:text-[57.6px] text-[35px] font-medium leading-tight text-center">To serve <span className="underline">delicious, healthy</span> and <span className="underline">eco-friendly</span> food</h1>

@@ -38,7 +38,7 @@ const Slider = ({
             pagination={{ clickable: true, enabled: pagination }}
             breakpoints={breakpoints}
         >
-            {slides.map((item, index) => {
+            {slides?.length && slides.map((item, index) => {
                 return (
                     <SwiperSlide key={index}>
                         <Image

@@ -5,23 +5,24 @@ import Image from "next/image"
 const SmallCard = ({
     title,
     image,
-    description
+    description,
+    show_read_btn = true,
 }) => {
-    const [show_read_more, setReadMore] = useState(description.length > 230);
-    const [fullDescription] = useState(description);
+    const [show_read_more, setReadMore] = useState(description.length > 230 && show_read_btn)
+    const [fullDescription] = useState(description)
     const [displayDescription, setDisplayDescription] = useState(
         description.length > 230 ?
             description.substring(0, 230-3) + '...' :
             description
-    );
+    )
 
     const read_more = () => {
-        setDisplayDescription(fullDescription);
-        setReadMore(false);
+        setDisplayDescription(fullDescription)
+        setReadMore(false)
     }
 
     return (
-        <div className="sm-card text-center max-w-[335px] md:mx-2.5 mb-10 md:mb-0 rounded-[20px]">
+        <div className="sm-card text-center rounded-[20px]">
             <div className="sm-card__image rounded-[20px] overflow-hidden h-[223.88px] flex items-center justify-center relative">
                 <Image src={image.src} layout="fill" className="object-cover" alt={image.alt} />
             </div>
@@ -37,7 +38,7 @@ const SmallCard = ({
                             <p>{displayDescription}</p>
                         </div>
                     )}
-                    {show_read_more && (
+                    {show_read_more && show_read_btn && (
                         <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
                     )}
                 </div>

@@ -8,6 +8,8 @@ import Header from "@/components/Header"
 import SmallCardsSection from "@/components/sections/SmallCardsSection";
 import CertifiedSection from "@/components/sections/CertifiedSection";
 import Footer from "@/components/Footer";
+import JobOffersSection from "@/components/sections/JobOffersSection"
+import ServicesSection from "@/components/sections/ServicesSection"
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
               <CounterSection />
               <SmallCardsSection />
               <CertifiedSection/>
+              <JobOffersSection />
+              <ServicesSection />
               <ContactFormSection />
               <Footer link="/terms" phone="T +352 26 17 73 1" mail="E aresto@pt.lu" />
           </main>

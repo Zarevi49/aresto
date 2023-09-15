@@ -30,18 +30,20 @@ const SmallCardsSection = () => {
     ]
     return (
         <div className="bg-gradient-yellow md:bg-gradient-primary-yellow w-full py-[48.83px] md:py-[89.83px] mt-[82.14px] md:mt-[107.14px] relative">
-            <div className="w-full max-w-[1400px] mx-auto relative">
+            <div className="w-full max-w-[1440px] mx-auto relative">
                 <VerticalText text={"our values"} top={"top-[40%]"} />
                 <div className="max-w-[1105px] px-5 mx-auto w-full flex-column md:flex">
                     {
                         cards.length && cards.map((item, index) => {
                             return (
-                                <SmallCard
-                                    key={index}
-                                    title={item.title}
-                                    image={item.image}
-                                    description={item.description}
-                                />
+                                <div className="max-w-[335px] mx-auto md:mx-2.5 mb-10 md:mb-0">
+                                    <SmallCard
+                                        key={index}
+                                        title={item.title}
+                                        image={item.image}
+                                        description={item.description}
+                                    />
+                                </div>
                             )
                         })
                     }

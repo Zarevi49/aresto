@@ -10,8 +10,14 @@ const BusinessSection = () => {
             description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             categories: ["all industries", ">20 employers", "lorem ipsum", "lorem ipsum", "lorem ipsum"],
             images: [
-                {src: "/img/slide-1.png"},
-                {src: "/img/slide-2.jpeg"},
+                {
+                    src: "/img/slide-1.png",
+                    alt: "slide"
+                },
+                {
+                    src: "/img/slide-2.jpeg",
+                    alt: "slide"
+                },
             ],
             button: {
                 link: "/contact",
@@ -24,8 +30,14 @@ const BusinessSection = () => {
             description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
             categories: ["schools", "crèches", "lorem ipsum", "lorem ipsum", "lorem ipsum"],
             images: [
-                {src: "/img/slide-2.jpeg"},
-                {src: "/img/slide-1.png"},
+                {
+                    src: "/img/slide-2.jpeg",
+                    alt: "slide"
+                },
+                {
+                    src: "/img/slide-1.png",
+                    alt: "slide"
+                },
             ],
             button: {
                 link: "/contact",
@@ -35,7 +47,7 @@ const BusinessSection = () => {
     ]
     return (
         <div className="bg-primary-light md:bg-gradient-primary-light w-full relative">
-            <div className="w-full max-w-[1400px] mx-auto relative px-5 pt-[50px] md:pt-[146px] md:pb-[0px] pb-[120px]">
+            <div className="w-full max-w-[1440px] mx-auto relative px-5 pt-[50px] md:pt-[146px] md:pb-[0px] pb-[120px]">
                 <VerticalText text={"our business lines"} top={"top-[40%]"} />
                 <div className="grid flex-wrap max-w-[1045px] w-full mx-auto">
                     {card_data.map((item, index) => {
