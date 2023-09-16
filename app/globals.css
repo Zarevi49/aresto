@@ -85,7 +85,7 @@ h1 span, h2 span, h3 span {
   text-decoration: underline;
 }
 
-.underline-word {
-  border-bottom: 2px solid currentColor; /* Или любой другой цвет, который вам нравится */
-  display: inline-block;
-}
+/*.underline-word {*/
+/*  border-bottom: 2px solid currentColor;*/
+/*  display: inline-block;*/
+/*}*/

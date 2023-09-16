@@ -12,7 +12,7 @@ function ContactForm() {
         <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-[1.5px] pt-[51px] md:pt-[60px] md:pr-[49px] md:pl-[66px] pb-[48px] md:pb-[26px]">
 
             <ContactInfo
-                title="Leave a message"
+                title="Leave a <span>message</span>"
                 address={['éÄresto', '53, rue de la libération', 'L-3511 Dudelange']}
                 phone="+352 26 17 73 1"
                 email="aresto@pt.lu"
