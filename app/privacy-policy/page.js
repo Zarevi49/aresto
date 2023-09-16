@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
             content: [
                 {
                     type: "paragraph",
-                    text: "La présente politique de confidentialité (ci-après la « Politique de confidentialité ») régit la façon dont Beim Méchel, société luxembourgeoise dont le siège est établi à 1, rue Jean Majerus L-7555 Mersch, immatriculée au Registre de Commerce et des Sociétés, Luxembourg, section B sous le numéro 221957 (ci-après, la « Société ») recueille, utilise, conserve et dévoile des informations recueillies auprès des utilisateurs (ci-après les « Utilisateurs » ou, à titre individuel, un « Utilisateur ») de notre site internet, https://beimmechel.lu (ci-après le « Site »)."
+                    text: "La présente politique de confidentialité (ci-après la « Politique de confidentialité ») régit la façon dont Beim Méchel, société luxembourgeoise dont le siège est établi à 1, rue Jean Majerus L-7555 Mersch, immatriculée au Registre de Commerce et des Sociétés, Luxembourg, section B sous le numéro 221957 (ci-après, la « Société ») recueille, utilise, conserve et dévoile des informations recueillies auprès des utilisateurs (ci-après les « Utilisateurs » ou, à titre individuel, un « Utilisateur ») de notre site internet, <a href='https://beimmechel.lu'>https://beimmechel.lu</a> (ci-après le « Site »)."
                 },
                 {
                     type: "header",
@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
                         }
                         if (item.type === "paragraph" && item.text) {
                             return (
-                                <p className="md:mb-[87px] mb-[70px]">{item.text}</p>
+                                <p className="md:mb-[87px] mb-[70px]" dangerouslySetInnerHTML={ {__html: item.text} }></p>
                             )
                         }
                     })

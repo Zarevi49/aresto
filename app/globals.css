@@ -78,3 +78,9 @@ body {
   transform: rotate(180deg);
   transition: transform 0.3s ease-out;
 }
+p a {
+  text-decoration: underline;
+}
+h1 span, h2 span, h3 span {
+  text-decoration: underline;
+}
