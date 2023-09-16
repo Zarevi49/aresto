@@ -4,38 +4,33 @@ import BannerSection from "@/components/sections/BannerSection"
 import BusinessSection from "@/components/sections/BusinessSection"
 import CounterSection from "@/components/sections/CounterSection"
 import ContactFormSection from "@/components/sections/ContactFormSection"
-import Header from "@/components/Header"
 import SmallCardsSection from "@/components/sections/SmallCardsSection";
 import CertifiedSection from "@/components/sections/CertifiedSection";
-import Footer from "@/components/Footer";
 import JobOffersSection from "@/components/sections/JobOffersSection"
 import ServicesSection from "@/components/sections/ServicesSection"
+import Layout from "@/components/Layout"
 
 export default function Home() {
   return (
-      <div>
-          <Header />
-          <main className="flex min-h-screen flex-col items-center justify-between">
-              <BannerSection />
-              <div className="mt-[-22.5px]">
-                  <Image
-                      src="/img/arrow_down.svg"
-                      alt="arrow down"
-                      width={45}
-                      height={45}
-                      priority
-                  />
-              </div>
-              <MissionSection />
-              <BusinessSection />
-              <CounterSection />
-              <SmallCardsSection />
-              <CertifiedSection/>
-              <JobOffersSection />
-              <ServicesSection />
-              <ContactFormSection />
-              <Footer link="/terms" phone="T +352 26 17 73 1" mail="E aresto@pt.lu" />
-          </main>
-      </div>
+      <Layout>
+          <BannerSection />
+          <div className="mt-[-22.5px]">
+              <Image
+                  src="/img/arrow_down.svg"
+                  alt="arrow down"
+                  width={45}
+                  height={45}
+                  priority
+              />
+          </div>
+          <MissionSection />
+          <BusinessSection />
+          <CounterSection />
+          <SmallCardsSection />
+          <CertifiedSection/>
+          <JobOffersSection />
+          <ServicesSection />
+          <ContactFormSection />
+      </Layout>
   )
 }
