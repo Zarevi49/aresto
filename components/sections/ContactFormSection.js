@@ -1,4 +1,4 @@
-import ContactForm from "@/components/ContactForm"
+import ContactForm from "@/components/form/ContactForm"
 import VerticalText from "@/components/VerticalText";
 
 const ContactFormSection = () => {

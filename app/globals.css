@@ -76,25 +76,3 @@ body {
   transform: rotate(180deg);
   transition: transform 0.3s ease-out;
 }
-
-/* form svg */
-.form-img {
-  position: relative;
-}
-
-@media screen and (min-width: 768px) {
-  .form-img:after {
-    top:calc(100% - 32px);
-    left: 54.7%;
-  }
-}
-
-.form-img:after {
-  content:'';
-  position: absolute;
-  top:calc(100% - 32px);
-  left: 20.7%;
-  background-image: url("/img/spoons.svg");
-  width: 162.59px;
-  height: 169.99px;
-}
