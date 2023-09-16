@@ -11,16 +11,15 @@ const CustomSelect = ({ options, onChange }) => {
     };
 
     return (
-        <div className="border-[1.5px] border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]">
+        <div className="w-full border-[1.5px] border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]">
             <div
-                className="selected-option px-[24px] py-[7px] flex justify-between items-center cursor-pointer"
+                className="selected-option px-[24px] py-[9px] flex justify-between items-center cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <span>{selected}</span>
                 <img className={isOpen ? "arrow-rotate" : ""} src="/img/down-arrow.svg" alt="Toggle Dropdown" />
             </div>
 
-            {/* Добавьте условие для класса open на основе значения isOpen */}
             <ul className={`options-list ${isOpen ? "open" : ""} absolute w-full bg-white relative`}>
                 {options.map((option, index) => (
                     <li

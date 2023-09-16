@@ -9,7 +9,7 @@ import Image from "next/image"
 
 function ContactForm() {
     return (
-        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-[1.5px] pt-[60px] pr-[49px] pb-[48px] md:pb-[26px] pl-[66px]">
+        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-[1.5px] pt-[51px] md:pt-[60px] md:pr-[49px] md:pl-[66px] pb-[48px] md:pb-[26px]">
 
             <ContactInfo
                 title="Leave a message"
@@ -18,8 +18,8 @@ function ContactForm() {
                 email="aresto@pt.lu"
             />
 
-            <form className="flex flex-col items-start w-full max-w-[520px] md:w-1/2">
-                <div className="mb-[9px]">
+            <form className="flex flex-col items-start mt-[45px] md:mt-0 px-[15px] md:px-0 w-full md:max-w-[520px] md:w-1/2">
+                <div className="mb-[9px] w-full">
                     <CustomSelect
                         options={['Option 1', 'Option 2', 'Option 3']}
                         onChange={(selected) => console.log(selected)}
@@ -40,22 +40,22 @@ function ContactForm() {
 
                 <TextareaComponent
                     placeholder="Message"
-                    className="w-full px-[24px] py-[11px] mb-[9px] border-[1.5px] border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px] resize-none"
+                    className="w-full px-[24px] py-[11px] border-[1.5px] border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px] resize-none"
                     rows="6"
                 />
 
                 <FormButton
                     type="submit"
-                    className="bg-blue-500 text-dark py-1 px-2.5 mb-[9px] rounded-full text-[13px] font-normal font-lato font-medium leading-150 tracking-[1.3px] uppercase border-[1.5px] cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex items-center align-between bg-primary-light hover:bg-white"
+                    className="self-end bg-blue-500 text-dark py-[6px] pl-[22px] pr-2.5 mt-[22px] rounded-full text-[13px] font-normal font-lato font-medium leading-[15px] tracking-[1.3px] uppercase border-[1.5px] cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex items-center align-between bg-primary-light hover:bg-white"
                 >
                     Send
-                    <Image src={"/img/right-arrow.svg"} alt={"send"} width={15} height={15} className="" />
+                    <Image src={"/img/right-arrow.svg"} alt={"send"} width={15} height={15} className="ml-3.5" />
                 </FormButton>
 
             </form>
 
-            <div className="absolute right-[16px] md:right-[34.3%] md:bottom-[-26%] -bottom-[16px]">
-                <Image src={"/img/spoons.svg"} alt={"fd"} width={162.59} height={169.99} className="" />
+            <div className="absolute left-[60px] md:left-auto md:right-[34.9%] md:bottom-[-29.2%] bottom-[-16.2%]">
+                <Image src={"/img/spoons.svg"} alt={"fd"} width={162.59} height={169.99} />
             </div>
 
         </div>

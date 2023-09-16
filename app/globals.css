@@ -78,3 +78,8 @@ body {
   transform: rotate(180deg);
   transition: transform 0.3s ease-out;
 }
+
+.underline-word {
+  border-bottom: 2px solid currentColor; /* Или любой другой цвет, который вам нравится */
+  display: inline-block;
+}
