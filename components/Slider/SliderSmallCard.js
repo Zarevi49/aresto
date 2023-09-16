@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import SmallCard from "@/components/card/SmallCard"
-import Button from "@/components/Button"
+import Button from "@/components/button/Button"
 
 const SliderSmallCard = ({
     section_data,

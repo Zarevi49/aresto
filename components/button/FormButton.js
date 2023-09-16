@@ -1,4 +1,4 @@
-function ButtonComponent({ children, className, type }) {
+function FormButton({ children, className, type }) {
     return (
         <button type={type} className={className}>
             {children}
@@ -6,4 +6,4 @@ function ButtonComponent({ children, className, type }) {
     );
 }
 
-export default ButtonComponent
+export default FormButton

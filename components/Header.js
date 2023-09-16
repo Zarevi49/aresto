@@ -1,5 +1,5 @@
-import Button from "@/components/Button";
-import ButtonPhone from "@/components/ButtonPhone";
+import Button from "@/components/button/Button";
+import ButtonPhone from "@/components/button/ButtonPhone";
 import LanguageDropdown from "@/components/LanguageDropdown";
 
 const Header = () => {

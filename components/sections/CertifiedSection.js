@@ -1,4 +1,4 @@
-import CertifiedSlider from "@/components/CertifiedSlider"
+import CertifiedSlider from "@/components/Slider/CertifiedSlider"
 
 const CertifiedSection = () => {
     return (

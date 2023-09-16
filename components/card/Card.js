@@ -2,7 +2,7 @@
 import { useState } from "react";
 import CardSlider from "@/components/card/CardSlider"
 import CardCategory from "@/components/card/CardCategory"
-import Button from "@/components/Button";
+import Button from "@/components/button/Button";
 
 const Card = ({
     data,

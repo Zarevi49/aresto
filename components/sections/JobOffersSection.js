@@ -1,5 +1,5 @@
 import VerticalText from "@/components/VerticalText"
-import SliderSmallCard from "@/components/SliderSmallCard"
+import SliderSmallCard from "@/components/Slider/SliderSmallCard"
 import Image from "next/image"
 
 const JobOffersSection = () => {

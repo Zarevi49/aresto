@@ -4,7 +4,7 @@ import CustomSelect from "./CustomSelect"
 import ContactInfo from './ContactInfo'
 import InputComponent from './InputComponent'
 import TextareaComponent from './TextareaComponent'
-import ButtonComponent from './ButtonComponent'
+import FormButton from '../button/FormButton'
 import Image from "next/image"
 
 function ContactForm() {
@@ -18,7 +18,7 @@ function ContactForm() {
                 email="aresto@pt.lu"
             />
 
-            <form className="flex flex-col w-full max-w-[520px] md:w-1/2">
+            <form className="flex flex-col items-start w-full max-w-[520px] md:w-1/2">
                 <div className="mb-[9px]">
                     <CustomSelect
                         options={['Option 1', 'Option 2', 'Option 3']}
@@ -44,13 +44,13 @@ function ContactForm() {
                     rows="6"
                 />
 
-                <ButtonComponent
+                <FormButton
                     type="submit"
                     className="bg-blue-500 text-dark py-1 px-2.5 mb-[9px] rounded-full text-[13px] font-normal font-lato font-medium leading-150 tracking-[1.3px] uppercase border-[1.5px] cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex items-center align-between bg-primary-light hover:bg-white"
                 >
                     Send
                     <Image src={"/img/right-arrow.svg"} alt={"send"} width={15} height={15} className="" />
-                </ButtonComponent>
+                </FormButton>
 
             </form>
 
