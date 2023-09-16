@@ -8,12 +8,13 @@ const Card = ({
     data,
     reverse,
     mb,
+    length = 250,
 }) => {
     const reverse_padding = reverse ? "md:pt-[48px] md:pr-[46px] md:pb-[43px] md:pl-[57px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]" : "md:pt-[36px] md:pr-[59px] md:pb-[36px] md:pl-[44px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]"
     // const description = useState(data.description)
     const [show_read_more, setReadMore] = useState(true)
-    const [description, setDescription] = useState(((data.description).length > 230) ?
-        (((data.description).substring(0,230-3)) + '...') :
+    const [description, setDescription] = useState(((data.description).length > length) ?
+        (((data.description).substring(0,length-3)) + '...') :
         data.description)
     const read_more = () => {
         setDescription(data.description)
@@ -23,10 +24,11 @@ const Card = ({
         <div className={`bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border border-dark flex flex-col md:flex-row ${
             reverse ? "md:flex-row-reverse" : " justify-self-end"
         } ${mb}`}>
-            <div className="md:max-w-[48.9%] w-full h-full">
+            <div className="md:max-w-[48.9%] w-full h-auto">
                 <CardSlider
                     images={data.images}
                     slider_per_view={1}
+                    show_read_more={show_read_more}
                 />
             </div>
             <div className={reverse_padding}>
@@ -40,7 +42,7 @@ const Card = ({
                         <p className="whitespace-pre-line">
                             { description }
                         </p>
-                        {show_read_more && (data.description).length > 230 && (
+                        {show_read_more && (data.description).length > length && (
                             <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
                         )}
                     </div>

@@ -15,7 +15,6 @@ const SliderSmallCard = ({
     navigation,
     custom_class,
     loop,
-    breakpoints
 }) => {
     const slides = section_data.cards
     return (
@@ -29,10 +28,12 @@ const SliderSmallCard = ({
             loop={loop}
             breakpoints={{
                 320: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1.3,
                 },
-                // when window width is >= 640px
-                640: {
+                768: {
+                    slidesPerView: 2.5,
+                },
+                1024: {
                     slidesPerView: 3.5,
                 }
             }}
@@ -67,6 +68,7 @@ const SliderSmallCard = ({
                             image={item.image}
                             description={item.description}
                             show_read_btn={false}
+                            mobile_small={true}
                         />
                     </SwiperSlide>
                     )

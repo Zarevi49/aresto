@@ -33,7 +33,7 @@ body {
 .swiper-arrow-left {
   background-image: url("/img/left.svg");
   width: 45px;
-  height: 45px;
+  height: 46px;
   background-size: cover;
   background-repeat: no-repeat;
   flex-shrink: 0;
@@ -41,14 +41,14 @@ body {
 .swiper-arrow-right {
   background-image: url("/img/right.svg");
   width: 45px;
-  height: 45px;
+  height: 46px;
   background-size: 100%;
   background-repeat: no-repeat;
   flex-shrink: 0;
 }
 .swiper-nav .swiper-button-prev, .swiper-nav .swiper-button-next {
   width: 45px;
-  height: 45px;
+  height: 46px;
 }
 .swiper-button-disabled {
   opacity: .35;

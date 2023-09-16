@@ -29,7 +29,7 @@ const Slider = ({
     return (
         <Swiper
             // install Swiper modules
-            className={full_height_slider + " " + custom_class}
+            className={full_height_slider + " h-full " + custom_class}
             modules={[Navigation, Pagination, A11y]}
             spaceBetween={space_between}
             slidesPerView={slider_per_view}
@@ -40,7 +40,7 @@ const Slider = ({
         >
             {slides?.length && slides.map((item, index) => {
                 return (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} className="!h-auto">
                         <Image
                             src={item.src}
                             alt={item.alt}

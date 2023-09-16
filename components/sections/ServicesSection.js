@@ -7,7 +7,7 @@ const ServicesSection = () => {
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren",
         images: [
             {
-                src: "/img/services.png",
+                src: "/img/services-1.png",
                 alt: "slide"
             },
             {
@@ -22,7 +22,7 @@ const ServicesSection = () => {
     }
     return (
         <div className="relative w-full max-w-[1440px] px-5 mx-auto md:mt-[195px] mt-[155px]">
-            <VerticalText text={"Services"} />
+            <VerticalText text={"Services"} top={"top-[55%]"} />
             <div className="max-w-[927px] w-full mx-auto">
                 <Card data={card} />
             </div>

@@ -8,7 +8,7 @@ const CardSlider = ({images, slider_per_view}) => {
             slider_per_view={slider_per_view}
             full_height={true}
             width={454}
-            height={0}
+            height={370}
         />
     )
 }

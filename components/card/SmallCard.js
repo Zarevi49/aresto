@@ -7,6 +7,7 @@ const SmallCard = ({
     image,
     description,
     show_read_btn = true,
+    mobile_small = false
 }) => {
     const [show_read_more, setReadMore] = useState(description.length > 230 && show_read_btn)
     const [fullDescription] = useState(description)
@@ -27,10 +28,10 @@ const SmallCard = ({
                 <Image src={image.src} layout="fill" className="object-cover" alt={image.alt} />
             </div>
             { (title || description) && (
-                <div className="sm-card__content -mt-5 pt-16 pb-[20px] px-[28px] border-2 border-dark rounded-b-[20px] bg-white">
+                <div className={`sm-card__content -mt-5 md:pt-16 md:pb-[20px] md:px-[28px] border-2 border-dark rounded-b-[20px] bg-white ${ mobile_small ? "pt-[30px] pb-[30px] px-[10px]" : "pt-16 pb-[20px] px-[28px]" }`}>
                     {title && (
                         <div className="sm-card__title">
-                            <h3 className="text-[40px] font-heading font-normal text-dark leading-110 mb-6">{title}</h3>
+                            <h3 className={`md:text-[40px] font-heading font-normal text-dark leading-110 md:mb-6 ${mobile_small ? "mb-[10px] text-[30px]" : "md-6 text-[40px]"}`}>{title}</h3>
                         </div>
                     )}
                     {description && (
