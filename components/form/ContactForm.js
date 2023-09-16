@@ -9,7 +9,7 @@ import Image from "next/image"
 
 function ContactForm() {
     return (
-        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-2 pt-[60px] pr-[49px] pb-[48px] md:pb-[26px] pl-[66px]">
+        <div className="w-full max-w-[1163px] mx-auto flex flex-wrap md:flex-nowrap rounded-[20px] border-[1.5px] pt-[60px] pr-[49px] pb-[48px] md:pb-[26px] pl-[66px]">
 
             <ContactInfo
                 title="Leave a message"
@@ -29,24 +29,24 @@ function ContactForm() {
                 <InputComponent
                     type="text"
                     placeholder="Name"
-                    className="w-full px-[24px] py-[7px] mb-[9px] border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]"
+                    className="w-full px-[24px] py-[7px] mb-[9px] border-[1.5px] border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]"
                 />
 
                 <InputComponent
                     type="email"
                     placeholder="Email"
-                    className="w-full px-[24px] py-[7px] mb-[9px] border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]"
+                    className="w-full px-[24px] py-[7px] mb-[9px] border-[1.5px] border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]"
                 />
 
                 <TextareaComponent
                     placeholder="Message"
-                    className="w-full px-[24px] py-[11px] mb-[9px] border-2 border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px] resize-none"
+                    className="w-full px-[24px] py-[11px] mb-[9px] border-[1.5px] border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px] resize-none"
                     rows="6"
                 />
 
                 <ButtonComponent
                     type="submit"
-                    className="bg-blue-500 text-dark py-1 px-2.5 mb-[9px] rounded-full text-[13px] font-normal font-lato font-medium leading-150 tracking-[1.3px] uppercase border-2 cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex items-center align-between bg-primary-light hover:bg-white"
+                    className="bg-blue-500 text-dark py-1 px-2.5 mb-[9px] rounded-full text-[13px] font-normal font-lato font-medium leading-150 tracking-[1.3px] uppercase border-[1.5px] cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex items-center align-between bg-primary-light hover:bg-white"
                 >
                     Send
                     <Image src={"/img/right-arrow.svg"} alt={"send"} width={15} height={15} className="" />

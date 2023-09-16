@@ -11,7 +11,7 @@ const CustomSelect = ({ options, onChange }) => {
     };
 
     return (
-        <div className="border-2 border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]">
+        <div className="border-[1.5px] border-dark rounded-full outline-none placeholder:text-dark text-dark font-normal text-[15px] h-[44px]">
             <div
                 className="selected-option px-[24px] py-[7px] flex justify-between items-center cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}

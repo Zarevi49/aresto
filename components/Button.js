@@ -4,7 +4,7 @@ function Button({ text, link, showArrow = false, accent = false}) {
     }
 
     return (
-        <a href={link} className={`bg-blue-500 text-dark py-1 px-2.5 rounded-full text-[13px] font-normal font-lato font-medium leading-[19.5px] tracking-[1.3px] uppercase border-2 cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex align-center ${accent ? 'bg-primary-light hover:bg-white' : 'bg-white'}`}>
+        <a href={link} className={`bg-blue-500 text-dark py-1 px-2.5 rounded-full text-[13px] font-normal font-lato font-medium leading-[19.5px] tracking-[1.3px] uppercase border-[1.5px] cursor-pointer hover:bg-primary-light bg-ease-in-out duration-300 inline-flex align-center ${accent ? 'bg-primary-light hover:bg-white' : 'bg-white'}`}>
             {text}
             {showArrow && (
                 <svg width="17" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2.5">

@@ -39,7 +39,7 @@ const SliderSmallCard = ({
             }}
         >
             <SwiperSlide className="!h-auto">
-                <div className="h-full rounded-[10px] md:rounded-[20px] border border-dark bg-primary-light pt-[41px] pl-[34px] pr-[24px] pb-[41px]">
+                <div className="h-full rounded-[10px] md:rounded-[20px] border-[1.5px] border-dark bg-primary-light pt-[41px] pl-[34px] pr-[24px] pb-[41px]">
                     {
                         section_data.title && (
                             <h3 className="text-[40px] md:text-[72px] font-heading leading-[90%] md:mb-[20px] mb-[30px]">{section_data.title}</h3>
