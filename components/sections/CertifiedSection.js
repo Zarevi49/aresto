@@ -1,10 +1,15 @@
 import CertifiedSlider from "@/components/Slider/CertifiedSlider"
 
 const CertifiedSection = () => {
+    const props = {
+        post: {
+            title: "Make a <span>difference</span>. We are certified.",
+        }
+    }
     return (
         <div className="max-w-[1204px] w-full pr-[20px] pl-[20px] mx-auto flex justify-between items-center flex-wrap">
             <div className="flex-shrink-0 lg:mr-[24px] lg:max-w-[28.7%] w-full">
-                <h3 className="font-heading text-[35px] md:text-[40px] leading-[110%] lg:mb-0 mb-[40px]">Make a <span className="underline">difference</span>. We are certified.</h3>
+                <h3 className="font-heading text-[35px] md:text-[40px] leading-[110%] lg:mb-0 mb-[40px]" dangerouslySetInnerHTML={ {__html: props.post.title} }></h3>
             </div>
             <div className="lg:max-w-[59.2%] w-full flex items-center justify-start">
                 <div className="swiper-button-left swiper-arrow-left lg:mr-[30px] mr-[9px]"></div>

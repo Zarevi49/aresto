@@ -1,6 +1,8 @@
 import Button from "@/components/button/Button";
 import ButtonPhone from "@/components/button/ButtonPhone";
 import LanguageDropdown from "@/components/LanguageDropdown";
+import Link from "next/link"
+import Image from "next/image"
 
 const Header = () => {
     return (
@@ -9,7 +11,15 @@ const Header = () => {
                 <span>Plus qu’un affaire <br/> de goût</span>
             </div>
             <div className="header__logo flex items-center justify-center order-2 mb-[39px] md:mb-0">
-                <img className="w-[148px] h-[48.94px]" src="/img/logo.svg" alt="Logo" />
+                <Link href="/">
+                    <Image
+                        src={"/img/logo.svg"}
+                        alt={"Logo"}
+                        width={148}
+                        height={48.94}
+                        className="w-[148px] h-[48.94px]"
+                    />
+                </Link>
             </div>
             <div className="header__btns flex gap-2 items-center justify-center md:justify-end order-1 md:order-2 md:mb-0 mb-[17px]">
                 <Button link="/#contact" text="kontakt" />
