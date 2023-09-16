@@ -32,7 +32,7 @@ const Footer = ({ link, phone, mail }) => {
     ];
 
     return (
-        <footer className="mx-auto w-full max-w-[1400px] bg-primary p-8 flex justify-between text-[15px] text-white rounded-t-[20px]">
+        <footer className="mx-auto w-full max-w-[1400px] bg-primary p-8 md:flex md:justify-between text-[15px] text-white rounded-t-[20px]">
             {footerSections.map((section, index) => {
                 switch (section.type) {
                     case "image":
