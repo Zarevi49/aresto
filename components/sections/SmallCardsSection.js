@@ -36,7 +36,7 @@ const SmallCardsSection = () => {
                     {
                         cards.length && cards.map((item, index) => {
                             return (
-                                <div className="max-w-[335px] mx-auto md:mx-2.5 mb-10 md:mb-0">
+                                <div className="max-w-[335px] mx-auto md:mx-2.5 mb-10 md:mb-0" key={index}>
                                     <SmallCard
                                         key={index}
                                         title={item.title}

@@ -1,5 +1,6 @@
 "use client"
 import React, { useState } from 'react'
+import Image from "next/image";
 const CustomSelect = ({ options, onChange }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState(options[0]);
@@ -17,7 +18,13 @@ const CustomSelect = ({ options, onChange }) => {
                 onClick={() => setIsOpen(!isOpen)}
             >
                 <span>{selected}</span>
-                <img className={isOpen ? "arrow-rotate" : ""} src="/img/down-arrow.svg" alt="Toggle Dropdown" />
+                <Image
+                    src={"/img/down-arrow.svg"}
+                    alt={"Toggle Dropdown"}
+                    className={isOpen ? "arrow-rotate" : ""}
+                    width={20}
+                    height={12}
+                />
             </div>
 
             <ul className={`options-list ${isOpen ? "open" : ""} absolute w-full bg-white relative`}>

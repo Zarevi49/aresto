@@ -53,15 +53,15 @@ export default function PrivacyPolicy() {
                     )
                 }
                 {
-                    props.post.content.map((item) => {
+                    props.post.content.map((item, key) => {
                         if (item.type === "header" && item.text) {
                             return (
-                                <h2 className="font-heading md:text-[30px] text-[25px] mb-[18px] leading-[90%] md:text-left text-center">{item.text}</h2>
+                                <h2 key={key + 'h2'} className="font-heading md:text-[30px] text-[25px] mb-[18px] leading-[90%] md:text-left text-center">{item.text}</h2>
                             )
                         }
                         if (item.type === "paragraph" && item.text) {
                             return (
-                                <p className="md:mb-[87px] mb-[70px]" dangerouslySetInnerHTML={ {__html: item.text} }></p>
+                                <p key={key + 'p'} className="md:mb-[87px] mb-[70px]" dangerouslySetInnerHTML={ {__html: item.text} }></p>
                             )
                         }
                     })
