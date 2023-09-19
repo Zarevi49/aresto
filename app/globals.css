@@ -69,7 +69,6 @@ body {
 .options-list {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
 }
 
 .options-list.open {
@@ -78,13 +77,21 @@ body {
 
 .arrow-rotate {
   transform: rotate(180deg);
-  transition: transform 0.3s ease-out;
 }
+
 p a {
   text-decoration: underline;
 }
+
 h1 span, h2 span, h3 span {
   text-decoration: underline;
+}
+
+.options-list.open {
+  border: 1.5px solid #1D1D1D;
+  border-radius: 20px;
+  width: calc(100% + 3px);
+  left: -1px;
 }
 
 /*.underline-word {*/
