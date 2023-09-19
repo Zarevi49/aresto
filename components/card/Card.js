@@ -9,6 +9,7 @@ const Card = ({
     reverse,
     mb,
     length = 250,
+    autoplay = false
 }) => {
     const reverse_padding = reverse ? "md:pt-[48px] md:pr-[46px] md:pb-[43px] md:pl-[57px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]" : "md:pt-[36px] md:pr-[59px] md:pb-[36px] md:pl-[44px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]"
     // const description = useState(data.description)
@@ -29,6 +30,7 @@ const Card = ({
                     images={data.images}
                     slider_per_view={1}
                     show_read_more={show_read_more}
+                    autoplay={autoplay}
                 />
             </div>
             <div className={reverse_padding}>

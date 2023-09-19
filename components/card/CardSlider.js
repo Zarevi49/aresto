@@ -1,6 +1,6 @@
 import Slider from "@/components/Slider"
 
-const CardSlider = ({images, slider_per_view}) => {
+const CardSlider = ({images, slider_per_view, autoplay}) => {
     return (
         <Slider
             images={images}
@@ -9,6 +9,7 @@ const CardSlider = ({images, slider_per_view}) => {
             full_height={true}
             width={454}
             height={370}
+            autoplay={autoplay}
         />
     )
 }

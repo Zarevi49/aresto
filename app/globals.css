@@ -13,6 +13,8 @@
   --swiper-pagination-bullet-size: 13px;
 }
 
+-webkit-mask-image: -webkit-radial-gradient(white, black);
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

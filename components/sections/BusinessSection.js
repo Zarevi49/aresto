@@ -59,6 +59,7 @@ const BusinessSection = () => {
                                 mb={(index + 1) !== card_data.length ? "md:mb-[90px] mb-[50px]" : ""}
                                 button={item.button}
                                 length={110}
+                                autoplay={index === 0}
                             />
                         )}
                     )}
