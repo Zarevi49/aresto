@@ -13,8 +13,6 @@
   --swiper-pagination-bullet-size: 13px;
 }
 
--webkit-mask-image: -webkit-radial-gradient(white, black);
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -94,6 +92,30 @@ h1 span, h2 span, h3 span {
   left: -1px;
 }
 
+.card-slider:nth-child(odd) .swiper {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-slider:nth-child(even) .swiper {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media (min-width: 768px) {
+  .card-slider:nth-child(odd) .swiper {
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 0;
+  }
+  .card-slider:nth-child(even) .swiper {
+    overflow: hidden;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+  }
+}
 /*.underline-word {*/
 /*  border-bottom: 2px solid currentColor;*/
 /*  display: inline-block;*/
