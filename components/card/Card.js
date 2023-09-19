@@ -22,7 +22,7 @@ const Card = ({
         setReadMore(false)
     }
     return (
-        <div className={`bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border-[1.5px] border-dark flex flex-col md:flex-row ${
+        <div className={`card-slider bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border-[1.5px] border-dark flex flex-col md:flex-row ${
             reverse ? "md:flex-row-reverse" : " justify-self-end"
         } ${mb}`}>
             <div className="md:max-w-[48.9%] w-full h-auto">
