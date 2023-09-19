@@ -44,11 +44,15 @@ const SmallCard = ({
                             <p>{displayDescription}</p>
                         </div>
                     )}
-                    {show_read_more ? (
-                        <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
-                    ) : (
-                        <div className="underline cursor-pointer" onClick={read_less}>Read less</div>
-                    )}
+                    {
+                        show_read_btn && (
+                            show_read_more ? (
+                                <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
+                            ) : (
+                                <div className="underline cursor-pointer" onClick={read_less}>Read less</div>
+                            )
+                        )
+                    }
                 </div>
             )}
         </div>

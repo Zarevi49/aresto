@@ -65,7 +65,7 @@ const BusinessSection = () => {
                     )}
                 </div>
             </div>
-            <div className="absolute right-[16px] md:right-[5%] md:bottom-[20%] -bottom-[16px]">
+            <div className="absolute right-[16px] z-10 md:right-[5%] md:hidden min-[1450px]:inline-block md:bottom-[20%] -bottom-[16px]">
                 <Image src={"/img/Illustration.svg"} alt={"fd"} width={223} height={109} className="w-[176px] h-[91px] md:w-[223px] md:h-[109px]" />
             </div>
         </div>
