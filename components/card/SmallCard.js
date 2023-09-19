@@ -22,6 +22,11 @@ const SmallCard = ({
         setReadMore(false)
     }
 
+    const read_less = () => {
+        setDisplayDescription(description.substring(0, 230-3) + '...');
+        setReadMore(true);
+    }
+
     return (
         <div className="sm-card text-center rounded-[20px]">
             <div className="sm-card__image rounded-[20px] overflow-hidden h-[223.88px] flex items-center justify-center relative">
@@ -39,8 +44,10 @@ const SmallCard = ({
                             <p>{displayDescription}</p>
                         </div>
                     )}
-                    {show_read_more && show_read_btn && (
+                    {show_read_more ? (
                         <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
+                    ) : (
+                        <div className="underline cursor-pointer" onClick={read_less}>Read less</div>
                     )}
                 </div>
             )}

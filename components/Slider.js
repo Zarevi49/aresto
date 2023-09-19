@@ -1,6 +1,6 @@
 // import Swiper core and required modules
 "use client"
-import { Navigation, Pagination, A11y } from 'swiper/modules';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -22,7 +22,8 @@ const Slider = ({
     img_custom_class,
     custom_class,
     loop,
-    breakpoints
+    breakpoints,
+    autoplay = false
 }) => {
     const slides = images
     const full_height_slider = full_height ? "h-full" : ""
@@ -30,13 +31,14 @@ const Slider = ({
         <Swiper
             // install Swiper modules
             className={full_height_slider + " h-full " + custom_class}
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
             spaceBetween={space_between}
             slidesPerView={slider_per_view}
             navigation={navigation}
             loop={loop}
             pagination={{ clickable: true, enabled: pagination }}
             breakpoints={breakpoints}
+            autoplay={autoplay}
         >
             {slides?.length && slides.map((item, index) => {
                 return (

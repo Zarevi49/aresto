@@ -67,7 +67,6 @@ body {
 .options-list {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
 }
 
 .options-list.open {
@@ -76,15 +75,47 @@ body {
 
 .arrow-rotate {
   transform: rotate(180deg);
-  transition: transform 0.3s ease-out;
 }
+
 p a {
   text-decoration: underline;
 }
+
 h1 span, h2 span, h3 span {
   text-decoration: underline;
 }
 
+.options-list.open {
+  border: 1.5px solid #1D1D1D;
+  border-radius: 20px;
+  width: calc(100% + 3px);
+  left: -1px;
+}
+
+.card-slider:nth-child(odd) .swiper {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card-slider:nth-child(even) .swiper {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+@media (min-width: 768px) {
+  .card-slider:nth-child(odd) .swiper {
+    overflow: hidden;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 0;
+  }
+  .card-slider:nth-child(even) .swiper {
+    overflow: hidden;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 0;
+  }
+}
 /*.underline-word {*/
 /*  border-bottom: 2px solid currentColor;*/
 /*  display: inline-block;*/

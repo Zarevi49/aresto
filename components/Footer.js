@@ -4,12 +4,12 @@ import Image from "next/image";
 const Footer = () => {
     return (
         <footer className="full px-5">
-            <div className="w-full mx-auto max-w-[1400px] bg-primary pt-[58px] pb-[19px] md:p-8 rounded-t-[20px]">
-                <div className="max-w-[1163px] flex flex-col items-center md:flex-row md:justify-between md:gap-2.5 text-[15px] text-white mx-auto">
+            <div className="w-full mx-auto max-w-[1400px] bg-primary pt-[58px] pb-[19px] md:px-8 md:pt-[50px] md:pb-8 rounded-t-[20px]">
+                <div className="max-w-[1163px] flex flex-col items-center md:items-start md:flex-row md:justify-between md:gap-2.5 text-[15px] text-white mx-auto">
                     <div className="md:mb-0 mb-[34px]">
                         <Image src={"/img/footer-logo.svg"} alt={"Footer logo"} width={148} height={48.94} />
                     </div>
-                    <div className="mb-[26px] flex flex-col items-center text-center md:items-start">
+                    <div className="mb-[26px] md:mb-0 flex flex-col items-center text-center md:items-start">
                         <p>Äresto</p>
                         <p>53, rue de la libération</p>
                         <p>L-3511 Dudelange</p>

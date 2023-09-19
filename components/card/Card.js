@@ -9,6 +9,7 @@ const Card = ({
     reverse,
     mb,
     length = 250,
+    autoplay = false
 }) => {
     const reverse_padding = reverse ? "md:pt-[48px] md:pr-[46px] md:pb-[43px] md:pl-[57px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]" : "md:pt-[36px] md:pr-[59px] md:pb-[36px] md:pl-[44px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]"
     // const description = useState(data.description)
@@ -21,7 +22,7 @@ const Card = ({
         setReadMore(false)
     }
     return (
-        <div className={`bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border-[1.5px] border-dark flex flex-col md:flex-row ${
+        <div className={`card-slider bg-white overflow-hidden md:rounded-[20px] rounded-[10px] max-w-[927px] w-full border-[1.5px] border-dark flex flex-col md:flex-row ${
             reverse ? "md:flex-row-reverse" : " justify-self-end"
         } ${mb}`}>
             <div className="md:max-w-[48.9%] w-full h-auto">
@@ -29,6 +30,7 @@ const Card = ({
                     images={data.images}
                     slider_per_view={1}
                     show_read_more={show_read_more}
+                    autoplay={autoplay}
                 />
             </div>
             <div className={reverse_padding}>
