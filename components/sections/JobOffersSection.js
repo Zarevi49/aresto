@@ -74,7 +74,7 @@ const JobOffersSection = () => {
                     }}
                 />
             </div>
-            <div className="absolute -left-[30px] md:left-[5%] md:bottom-0 bottom-0 z-40">
+            <div className="absolute -left-[30px] md:left-[5%] md:bottom-0 -bottom-[90px] z-40">
                 <Image src={"/img/jobs_offers.svg"} alt={"fd"} width={360} height={240} className="w-[360px] h-[240px]" />
             </div>
             <div className="max-w-[1204px] px-5 mx-auto md:mt-[18px] w-full justify-end md:flex hidden">
