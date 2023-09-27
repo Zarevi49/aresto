@@ -24,7 +24,7 @@ const Header = () => {
             <div className="header__btns flex gap-2 items-center justify-center md:justify-end order-1 md:order-2 md:mb-0 mb-[17px]">
                 <Button link="/#contact" text="kontakt" />
                 <ButtonPhone text="+352 26 17 73 1" />
-                <LanguageDropdown text="De" accent={true}/>
+                <LanguageDropdown />
             </div>
         </div>
     )
