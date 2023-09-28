@@ -49,18 +49,18 @@ const Card = ({
                         )}
                     </div>
                 )}
-                {data.categories && (
+                {data.tags && (
                     <div className="flex flex-wrap mt-[16px]">
-                        {data.categories?.map((item, index) => {
+                        {data.tags?.map((item, index) => {
                             return (
                                 <CardCategory title={item} key={index}/>
                             )}
                         )}
                     </div>
                 )}
-                {data.button && (
+                {data.link && (
                     <div className="mt-5 md:mt-[23px]">
-                        <Button link={data.button.link} text={data.button.text} showArrow={true} accent={true} />
+                        <Button link={data.link} text={"Kontakt"} showArrow={true} accent={true} />
                     </div>
                 )}
             </div>

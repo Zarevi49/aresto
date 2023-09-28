@@ -51,15 +51,15 @@ const SliderSmallCard = ({
                         )
                     }
                     {
-                        section_data.button && (
+                        section_data.link && (
                             <div className="mt-[32px]">
-                                <Button text={section_data.button.title} link={section_data.button.link} showArrow={true} />
+                                <Button text={"Job offers"} link={section_data.link} showArrow={true} />
                             </div>
                         )
                     }
                 </div>
             </SwiperSlide>
-            {slides.map((item, index) => {
+            {slides.length && slides.map((item, index) => {
                 return (
                     <SwiperSlide key={index}>
                         <SmallCard

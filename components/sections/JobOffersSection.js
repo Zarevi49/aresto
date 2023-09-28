@@ -2,11 +2,11 @@ import VerticalText from "@/components/VerticalText"
 import SliderSmallCard from "@/components/Slider/SliderSmallCard"
 import Image from "next/image"
 
-const JobOffersSection = () => {
+const JobOffersSection = ({data}) => {
     const section_data = {
         title: "Join the team.",
         description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam",
-        button: {
+        link: {
             title: "job offers",
             link: "/job_offers"
         },
@@ -61,12 +61,14 @@ const JobOffersSection = () => {
             },
         ]
     }
+    const cards = data ? data : section_data
+
     return (
         <div className="relative mt-[130px] md:mt-[180px] px-5 pr-0 pb-[173px] md:pb-[75px] w-full max-w-[1440px]">
             <VerticalText text={"Job offers"} top={"top-[50%]"} />
             <div className="max-w-[1300px] w-full overflow-visible md:ml-auto">
                 <SliderSmallCard
-                    section_data={section_data}
+                    section_data={cards}
                     navigation={{
                         enabled: true,
                         nextEl: '.swiper-jobs-right',

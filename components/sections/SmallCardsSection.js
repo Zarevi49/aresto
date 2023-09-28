@@ -1,8 +1,8 @@
 import SmallCard from "@/components/card/SmallCard";
 import VerticalText from "@/components/VerticalText";
 
-const SmallCardsSection = () => {
-    const cards = [
+const SmallCardsSection = ({data}) => {
+    const cards_local = [
         {
             title: "local",
             image: {
@@ -28,6 +28,7 @@ const SmallCardsSection = () => {
             description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren"
         },
     ]
+    const cards = data.cards.length ? data.cards : cards_local
     return (
         <div className="bg-gradient-yellow md:bg-gradient-primary-yellow w-full py-[48.83px] md:py-[89.83px] mt-[82.14px] md:mt-[107.14px] relative">
             <div className="w-full max-w-[1440px] mx-auto relative">

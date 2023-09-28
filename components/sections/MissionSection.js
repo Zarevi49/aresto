@@ -2,8 +2,7 @@ import VerticalText from "@/components/VerticalText"
 import Image from "next/image"
 
 const MissionSection = ({data}) => {
-    console.log(data)
-    const content_blocks = data.content.blocks
+    const content_blocks = data.content.blocks.length ? data.content.blocks : props
     const props = {
         post: {
             title: "To serve <span>delicious, healthy</span> and <span>eco-friendly</span> food",
@@ -15,7 +14,7 @@ const MissionSection = ({data}) => {
             <VerticalText text={"Our mission"} />
             {
                 content_blocks.length && content_blocks.map((block) => {
-                    if (block.type === "header") {
+                    if (block.type === "header" && block.data.text) {
                         const Tag = `h${block.data.level}`
                         return (
                             <div key={block.id} className="tw-full max-w-[830px] mx-auto md:mb-10 mb-[29px]">
@@ -23,7 +22,7 @@ const MissionSection = ({data}) => {
                             </div>
                         )
                     }
-                    if (block.type === "paragraph") {
+                    if (block.type === "paragraph" && block.data.text) {
                         return (
                             <div key={block.id} className="w-full max-w-[424px] mx-auto">
                                 <p className="text-[15px] font-light text-center">{block.data.text}</p>

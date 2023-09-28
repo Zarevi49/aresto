@@ -2,7 +2,7 @@ import VerticalText from "@/components/VerticalText"
 import Card from "@/components/card/Card"
 import Image from "next/image"
 
-const BusinessSection = () => {
+const BusinessSection = ({data}) => {
     const card_data = [
         {
             id: 1,
@@ -45,12 +45,13 @@ const BusinessSection = () => {
             }
         }
     ]
+    const cards = data.cards.length ? data.cards : card_data
     return (
         <div className="bg-primary-light md:bg-gradient-primary-light w-full relative">
             <div className="w-full max-w-[1440px] mx-auto relative px-5 pt-[50px] md:pt-[146px] md:pb-[0px] pb-[120px]">
                 <VerticalText text={"our business lines"} top={"top-[40%]"} />
                 <div className="grid flex-wrap max-w-[1045px] w-full mx-auto">
-                    {card_data.map((item, index) => {
+                    {cards.map((item, index) => {
                         return (
                             <Card
                                 key={index + 1}

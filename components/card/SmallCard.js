@@ -30,7 +30,7 @@ const SmallCard = ({
     return (
         <div className="sm-card text-center rounded-[20px]">
             <div className="sm-card__image rounded-[20px] overflow-hidden h-[223.88px] flex items-center justify-center relative">
-                <Image src={image.src} layout="fill" className="object-cover" alt={image.alt} />
+                <Image src={`http://localhost:8055/assets/${image}`} layout="fill" className="object-cover" alt={image} />
             </div>
             { (title || description) && (
                 <div className={`sm-card__content -mt-5 md:pt-16 md:pb-[20px] md:px-[28px] border-[1.5px] border-dark rounded-b-[20px] bg-white ${ mobile_small ? "pt-[30px] pb-[30px] px-[10px]" : "pt-16 pb-[20px] px-[28px]" }`}>

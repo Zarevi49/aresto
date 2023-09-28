@@ -44,8 +44,8 @@ const Slider = ({
                 return (
                     <SwiperSlide key={index} className="!h-auto">
                         <Image
-                            src={item.src}
-                            alt={item.alt}
+                            src={`http://localhost:8055/assets/${item.directus_files_id}`}
+                            alt={"alt"}
                             width={width}
                             height={height}
                             className={`w-full h-auto ${full_height_slider} ${

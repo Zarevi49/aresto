@@ -1,17 +1,17 @@
 import Slider from "@/components/Slider"
 
-const Carousel = () => {
-    const images = [
-        { src: "/img/label1.png", alt: "Description 1" },
-        { src: "/img/label2.png", alt: "Description 2" },
-        { src: "/img/label3.png", alt: "Description 2" },
-        { src: "/img/label2.png", alt: "Description 2" },
-        { src: "/img/label3.png", alt: "Description 2" },
-        { src: "/img/label2.png", alt: "Description 2" },
-        { src: "/img/label3.png", alt: "Description 2" },
-        { src: "/img/label2.png", alt: "Description 2" },
-        { src: "/img/label3.png", alt: "Description 2" },
-    ]
+const Carousel = ({images}) => {
+    // const images = [
+    //     { src: "/img/label1.png", alt: "Description 1" },
+    //     { src: "/img/label2.png", alt: "Description 2" },
+    //     { src: "/img/label3.png", alt: "Description 2" },
+    //     { src: "/img/label2.png", alt: "Description 2" },
+    //     { src: "/img/label3.png", alt: "Description 2" },
+    //     { src: "/img/label2.png", alt: "Description 2" },
+    //     { src: "/img/label3.png", alt: "Description 2" },
+    //     { src: "/img/label2.png", alt: "Description 2" },
+    //     { src: "/img/label3.png", alt: "Description 2" },
+    // ]
     return (
         <Slider
             images={images}

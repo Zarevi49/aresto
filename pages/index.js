@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import MissionSection from "@/components/sections/MissionSection"
 import BannerSection from "@/components/sections/BannerSection"
 import BusinessSection from "@/components/sections/BusinessSection"
@@ -22,6 +21,7 @@ export async function getStaticProps({ locale }) {
                 '*.*',
                 'translations.blocks.*',
                 'translations.blocks.item.*',
+                'translations.blocks.item.images.*',
                 'translations.blocks.item.cards.*',
                 'translations.blocks.item.cards.images.*',
                 'translations.blocks.item.video.*',
@@ -58,14 +58,26 @@ export default function Home({global_settings, item}) {
                     else if (component === "block_heading_and_text") {
                         return <MissionSection key={block.id} data={block.item}  />
                     }
+                    else if (component === "block_business") {
+                        return <BusinessSection key={block.id} data={block.item}  />
+                    }
+                    else if (component === "block_numbers") {
+                        return <CounterSection key={block.id} data={block.item}  />
+                    }
+                    else if (component === "block_cardgroup") {
+                        return <SmallCardsSection key={block.id} data={block.item}  />
+                    }
+                    else if (component === "block_heading_and_slider") {
+                        return <CertifiedSection key={block.id} data={block.item}  />
+                    }
+                    else if (component === "block_cardgroup_slider") {
+                        return <JobOffersSection key={block.id} data={block.item}  />
+                    }
+                    else if (component === "block_services") {
+                        return <ServicesSection key={block.id} data={block.item}  />
+                    }
                 })
             }
-            <BusinessSection />
-            <CounterSection />
-            <SmallCardsSection />
-            <CertifiedSection/>
-            <JobOffersSection />
-            <ServicesSection />
             <ContactFormSection />
         </Layout>
     )
