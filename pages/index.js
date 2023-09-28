@@ -8,23 +8,58 @@ import SmallCardsSection from "@/components/sections/SmallCardsSection";
 import CertifiedSection from "@/components/sections/CertifiedSection";
 import JobOffersSection from "@/components/sections/JobOffersSection"
 import ServicesSection from "@/components/sections/ServicesSection"
-import Layout from "@/components/Layout"
+import Layout, {getGlobalSettings} from "@/components/Layout"
+import {Axios, DIRECTUS_API_ENDPOINT} from "@/helpers/directus"
 
-export default function Home() {
+const COLLECTION_NAME = 'website_aresto_home_page'
+
+export async function getStaticProps({ locale }) {
+    const global_settings = await getGlobalSettings(locale)
+
+    const requestConfig = {
+        params: {
+            fields: [
+                '*.*',
+                'translations.blocks.*',
+                'translations.blocks.item.*',
+                'translations.blocks.item.cards.*',
+                'translations.blocks.item.cards.images.*',
+                'translations.blocks.item.video.*',
+            ],
+            limit: 1,
+        },
+    };
+    const response = await Axios.get(`${DIRECTUS_API_ENDPOINT}/items/${COLLECTION_NAME}/`, requestConfig)
+    const itemData = response.data.data
+    const translation = itemData.translations.find(t => t.languages_code === locale)
+    console.log(itemData)
+    return {
+        props: {
+            global_settings,
+            item: translation
+        },
+    };
+
+}
+
+export default function Home({global_settings, item}) {
+    console.log(item)
     return (
-        <Layout>
-            1111
-            <BannerSection />
-            <div className="mt-[-22.5px]">
-                <Image
-                    src="/img/arrow_down.svg"
-                    alt="arrow down"
-                    width={45}
-                    height={45}
-                    priority
-                />
-            </div>
-            <MissionSection />
+        <Layout global_settings={global_settings}>
+            {
+                item.blocks.map((block) => {
+                    // Determine the component name and data from the fetched data
+                    const component = block.collection
+                    if (component === "block_banner") {
+                        return (
+                            <BannerSection key={block.id} data={block.item} />
+                        )
+                    }
+                    else if (component === "block_heading_and_text") {
+                        return <MissionSection key={block.id} data={block.item}  />
+                    }
+                })
+            }
             <BusinessSection />
             <CounterSection />
             <SmallCardsSection />

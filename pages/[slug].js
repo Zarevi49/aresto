@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout"
-import {Axios, DIRECTUS_API_ENDPOINT} from "@/lib/directus"
+import Layout, {getGlobalSettings} from "@/components/Layout"
+import {Axios, DIRECTUS_API_ENDPOINT} from "@/helpers/directus"
 const COLLECTION_NAME = 'website_aresto_pages'
 
 export async function getStaticPaths({ locales }) {
@@ -24,9 +24,12 @@ export async function getStaticProps({ params, locale }) {
 
         // Filter the translations based on the provided locale
         const translation = itemData.translations.find(t => t.languages_code === locale)
+
+        const global_settings = await getGlobalSettings(locale);
         return {
             props: {
                 item: translation,
+                global_settings
             }
         }
     } catch (error) {
@@ -35,13 +38,13 @@ export async function getStaticProps({ params, locale }) {
     }
 }
 
-function Page({ item }) {
+function Page({ item, global_settings }) {
     if (!item) {
         // If no item data is provided, render a not found message
         return <div>Item not found.</div>
     }
     return (
-        <Layout classes={"bg-primary-light"}>
+        <Layout classes={"bg-primary-light"} global_settings={global_settings}>
             <div className="max-w-[908px] px-5 mx-auto md:mt-[176px] mt-[76px] md:mb-[100px] mb-[80px]">
                 {
                     item.content.blocks.map((item, index_t) => {

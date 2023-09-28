@@ -7,8 +7,8 @@ const MainBanner = ({ type, src }) => {
                 <Image
                     src={src}
                     alt="Main Banner"
-                    width={0}
-                    height={0}
+                    width={2800}
+                    height={1200}
                     className="w-full h-[320px] md:h-auto object-cover md:object-none"
                     priority
                 />

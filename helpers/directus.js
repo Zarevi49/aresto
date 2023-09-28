@@ -37,8 +37,8 @@
 //
 import axios from "axios"
 
-const DIRECTUS_API_ENDPOINT = 'http://0.0.0.0:8055'
-const API_TOKEN = "vX79axZaWlOJ6gtdz3DPRchIe-Oeyw0U"
+const DIRECTUS_API_ENDPOINT = process.env.DIRECTUS_API_ENDPOINT
+const API_TOKEN = process.env.API_TOKEN
 
 const Axios = axios.create({
     baseURL: `${DIRECTUS_API_ENDPOINT}`,
