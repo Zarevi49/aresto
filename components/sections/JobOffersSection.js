@@ -65,7 +65,11 @@ const JobOffersSection = ({data}) => {
 
     return (
         <div className="relative mt-[130px] md:mt-[180px] px-5 pr-0 pb-[173px] md:pb-[75px] w-full max-w-[1440px]">
-            <VerticalText text={"Job offers"} top={"top-[50%]"} />
+            {
+                data.title_left && (
+                    <VerticalText text={data.title_left} top={"top-[50%]"} />
+                )
+            }
             <div className="max-w-[1300px] w-full overflow-visible md:ml-auto">
                 <SliderSmallCard
                     section_data={cards}

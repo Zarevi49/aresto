@@ -9,7 +9,7 @@ const nextConfig = {
     //     domains: ['localhost'], // Add "localhost" to the list of allowed domains
     // },
     images: {
-      domains: ['http://localhost'],
+      domains: ['http://localhost:8055'],
       remotePatterns: [
         {
           hostname: "localhost",

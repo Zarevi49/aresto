@@ -9,6 +9,7 @@ import JobOffersSection from "@/components/sections/JobOffersSection"
 import ServicesSection from "@/components/sections/ServicesSection"
 import Layout, {getGlobalSettings} from "@/components/Layout"
 import {Axios, DIRECTUS_API_ENDPOINT} from "@/helpers/directus"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 const COLLECTION_NAME = 'website_aresto_home_page'
 
@@ -32,18 +33,17 @@ export async function getStaticProps({ locale }) {
     const response = await Axios.get(`${DIRECTUS_API_ENDPOINT}/items/${COLLECTION_NAME}/`, requestConfig)
     const itemData = response.data.data
     const translation = itemData.translations.find(t => t.languages_code === locale)
-    console.log(itemData)
     return {
         props: {
             global_settings,
-            item: translation
+            item: translation,
+            ...(await serverSideTranslations(locale, ["common"]))
         },
     };
 
 }
 
 export default function Home({global_settings, item}) {
-    console.log(item)
     return (
         <Layout global_settings={global_settings}>
             {
@@ -76,9 +76,11 @@ export default function Home({global_settings, item}) {
                     else if (component === "block_services") {
                         return <ServicesSection key={block.id} data={block.item}  />
                     }
+                    else if (component === "block_contact") {
+                        return <ContactFormSection key={block.id} data={block.item}  />
+                    }
                 })
             }
-            <ContactFormSection />
         </Layout>
     )
 }

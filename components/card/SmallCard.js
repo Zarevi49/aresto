@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react"
 import Image from "next/image"
+import { useTranslation } from "next-i18next"
 
 const SmallCard = ({
     title,
@@ -9,6 +10,7 @@ const SmallCard = ({
     show_read_btn = true,
     mobile_small = false
 }) => {
+    const { t } = useTranslation()
     const [show_read_more, setReadMore] = useState(description.length > 230 && show_read_btn)
     const [fullDescription] = useState(description)
     const [displayDescription, setDisplayDescription] = useState(
@@ -47,9 +49,9 @@ const SmallCard = ({
                     {
                         show_read_btn && (
                             show_read_more ? (
-                                <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
+                                <div className="underline cursor-pointer" onClick={read_more}>{t("read_more")}</div>
                             ) : (
-                                <div className="underline cursor-pointer" onClick={read_less}>Read less</div>
+                                <div className="underline cursor-pointer" onClick={read_less}>{t("read_less")}</div>
                             )
                         )
                     }

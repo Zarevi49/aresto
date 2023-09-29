@@ -1,5 +1,6 @@
 import Layout, {getGlobalSettings} from "@/components/Layout"
 import {Axios, DIRECTUS_API_ENDPOINT} from "@/helpers/directus"
+import {serverSideTranslations} from "next-i18next/serverSideTranslations"
 const COLLECTION_NAME = 'website_aresto_pages'
 
 export async function getStaticPaths({ locales }) {
@@ -29,7 +30,8 @@ export async function getStaticProps({ params, locale }) {
         return {
             props: {
                 item: translation,
-                global_settings
+                global_settings,
+                ...(await serverSideTranslations(locale, ["common"]))
             }
         }
     } catch (error) {

@@ -3,6 +3,7 @@ import { useState } from "react";
 import CardSlider from "@/components/card/CardSlider"
 import CardCategory from "@/components/card/CardCategory"
 import Button from "@/components/button/Button";
+import { useTranslation } from "next-i18next"
 
 const Card = ({
     data,
@@ -11,6 +12,7 @@ const Card = ({
     length = 250,
     autoplay = false
 }) => {
+    const { t } = useTranslation()
     const reverse_padding = reverse ? "md:pt-[48px] md:pr-[46px] md:pb-[43px] md:pl-[57px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]" : "md:pt-[36px] md:pr-[59px] md:pb-[36px] md:pl-[44px] pt-[28.5px] pr-[16px] pb-[21px] pl-[24px]"
     // const description = useState(data.description)
     const [show_read_more, setReadMore] = useState(true)
@@ -45,7 +47,7 @@ const Card = ({
                             { description }
                         </p>
                         {show_read_more && (data.description).length > length && (
-                            <div className="underline cursor-pointer" onClick={read_more}>Read more</div>
+                            <div className="underline cursor-pointer" onClick={read_more}>{t("read_more")}</div>
                         )}
                     </div>
                 )}
@@ -58,11 +60,14 @@ const Card = ({
                         )}
                     </div>
                 )}
-                {data.link && (
-                    <div className="mt-5 md:mt-[23px]">
-                        <Button link={data.link} text={"Kontakt"} showArrow={true} accent={true} />
-                    </div>
-                )}
+                <div className="mt-5 md:mt-[23px]">
+                    <Button
+                        link={data.link ? data.link : "#contact"}
+                        text={data.link_title ? data.link_title : t("contact")}
+                        showArrow={true}
+                        accent={true}
+                    />
+                </div>
             </div>
         </div>
     )

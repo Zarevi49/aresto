@@ -11,7 +11,11 @@ const MissionSection = ({data}) => {
     }
     return (
         <div className="w-full max-w-[1440px] mx-auto px-5 md:pt-[110px] pt-[58.5px] pb-[170px] md:pb-[84px] relative">
-            <VerticalText text={"Our mission"} />
+            {
+                data.title_left && (
+                    <VerticalText text={data.title_left} />
+                )
+            }
             {
                 content_blocks.length && content_blocks.map((block) => {
                     if (block.type === "header" && block.data.text) {

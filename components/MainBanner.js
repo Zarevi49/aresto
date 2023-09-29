@@ -11,6 +11,7 @@ const MainBanner = ({ type, src }) => {
                     height={1200}
                     className="w-full h-[320px] md:h-auto object-cover md:object-none"
                     priority
+                    quality={100}
                 />
             }
             {type === 'video' &&

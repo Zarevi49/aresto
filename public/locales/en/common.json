@@ -1,0 +1,18 @@
+{
+  "left_header_text": "Plus qu’un affaire\nde goût",
+  "contact": "Contact",
+  "read_more": "Read more",
+  "read_less": "Read less",
+  "job_offers": "Job offers",
+  "name": "Name",
+  "email": "Email",
+  "message": "Message",
+  "send": "Send",
+  "select_options": {
+    "option1": "Option1",
+    "option2": "Option2"
+  },
+  "errors": {
+    "email": "Invalid email address!"
+  }
+}

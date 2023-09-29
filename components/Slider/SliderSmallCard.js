@@ -3,6 +3,7 @@
 import { Navigation, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useTranslation } from "next-i18next"
 
 // Import Swiper styles
 import 'swiper/css';
@@ -16,6 +17,7 @@ const SliderSmallCard = ({
     custom_class,
     loop,
 }) => {
+    const { t } = useTranslation()
     const slides = section_data.cards
     return (
         <Swiper
@@ -53,7 +55,11 @@ const SliderSmallCard = ({
                     {
                         section_data.link && (
                             <div className="mt-[32px]">
-                                <Button text={"Job offers"} link={section_data.link} showArrow={true} />
+                                <Button
+                                    text={section_data.link_title ? section_data.link_title : t("job_offers")}
+                                    link={section_data.link}
+                                    showArrow={true}
+                                />
                             </div>
                         )
                     }
