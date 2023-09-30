@@ -44,7 +44,7 @@ const Slider = ({
                 return (
                     <SwiperSlide key={index} className="!h-auto">
                         <Image
-                            src={`http://localhost:8055/assets/${item.directus_files_id}`}
+                            src={`${process.env.IMAGE_SRC}${item.directus_files_id}`}
                             alt={"alt"}
                             width={width}
                             height={height}

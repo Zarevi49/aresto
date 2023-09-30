@@ -2,7 +2,10 @@ import CustomSelect from "./CustomSelect"
 import FormButton from '../button/FormButton'
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
-import {useState} from "react"
+import {useRef, useState} from "react"
+
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+
 function isValidEmail(email) {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
     return emailRegex.test(email)
@@ -15,6 +18,11 @@ function ContactForm() {
     const [touched, setTouched] = useState(false)
     const [name, setName] = useState("")
     const [message, setMessage] = useState("")
+
+    const [form_send, setFormSend] = useState(false)
+
+    const { executeRecaptcha } = useGoogleReCaptcha()
+
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
     }
@@ -25,27 +33,35 @@ function ContactForm() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        try {
-            // Send formData to the server for processing and email sending
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ choices, name, email, message }),
-            })
-
-            if (response.status === 200) {
-                setChoices(t("select_options.option1"))
-                setName("")
-                setEmail("")
-                setMessage("")
-            } else {
-                console.log(response)
-            }
-        } catch (error) {
-            console.error('Error:', error)
+        if (!executeRecaptcha) {
+            return
         }
+        executeRecaptcha("contact").then(async (recaptchaToken) => {
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({choices, name, email, message, recaptchaToken}),
+                })
+
+                if (response.status === 200) {
+                    setFormSend(true)
+                    setTimeout(() => {
+                        setFormSend(false)
+                    }, 3000)
+                    setChoices(t("select_options.option1"))
+                    setName("")
+                    setEmail("")
+                    setMessage("")
+                } else {
+                    console.log(response)
+                }
+            } catch (error) {
+                console.error('Error:', error)
+            }
+        })
     }
 
     return (
@@ -85,6 +101,12 @@ function ContactForm() {
                 className="w-full px-[24px] py-[11px] border-[1.5px] border-dark rounded-[22px] outline-none placeholder:text-dark text-dark font-normal text-[15px] resize-none"
                 rows={6}
             ></textarea>
+
+            {
+                form_send && (
+                    <p style={{color: 'green'}}>{t("form_send")}</p>
+                )
+            }
 
             <FormButton
                 type="submit"

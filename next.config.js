@@ -19,6 +19,10 @@ const nextConfig = {
       ],
     },
     i18n,
+    env: {
+        RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+        IMAGE_SRC: process.env.IMAGE_SRC,
+    },
 }
 
 module.exports = nextConfig

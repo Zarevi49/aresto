@@ -2,8 +2,25 @@ import nodemailer from 'nodemailer'
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
-        const { choices, name, email, message } = req.body
+        const { choices, name, email, message, recaptchaToken } = req.body
 
+        const reCaptchaRes = await fetch(
+            "https://www.google.com/recaptcha/api/siteverify",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: `secret=${process.env.RECAPTCHA_SITE_KEY}&response=${recaptchaToken}`,
+            }
+        )
+
+        const reCaptchaData = await reCaptchaRes.json()
+
+        if (reCaptchaData?.score < 0.5) {
+            res.status(400).json({ error: 'reCAPTCHA verification failed.' })
+            return
+        }
         try {
             // Create a transporter using your email service provider
             const transporter = nodemailer.createTransport({
@@ -19,7 +36,7 @@ export default async function handler(req, res) {
             // Create an email message
             const mailOptions = {
                 from: process.env.EMAIL_SEND_EMAIL,
-                to: 'emmaelliot2020@gmail.com', // Replace with the recipient's email address
+                to: process.env.EMAIL_SEND_EMAIL, // Replace with the recipient's email address
                 subject: 'New Contact Form Submission',
                 text: `
                   Choice: ${choices}
@@ -32,11 +49,11 @@ export default async function handler(req, res) {
             // Send the email
             transporter.sendMail(mailOptions, (error, info) => {
                 if (error) {
-                    console.error('Error sending email:', error);
-                    res.status(500).end(); // Internal Server Error
+                    console.error('Error sending email:', error)
+                    res.status(500).end() // Internal Server Error
                 } else {
-                    console.log('Email sent:', info.response);
-                    res.status(200).end(); // Success
+                    console.log('Email sent:', info.response)
+                    res.status(200).end() // Success
                 }
             })
         } catch (error) {

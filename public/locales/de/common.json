@@ -8,6 +8,7 @@
     "email": "Email",
     "message": "Message",
     "send": "Send",
+    "form_send": "You have successfully leave a message",
     "select_options": {
         "option1": "Option1",
         "option2": "Option2"
