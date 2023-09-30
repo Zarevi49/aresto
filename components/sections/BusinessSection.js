@@ -45,7 +45,7 @@ const BusinessSection = ({data}) => {
             }
         }
     ]
-    const cards = data.cards.length ? data.cards : card_data
+    const cards = data.cards.length ? data.cards : []
     return (
         <div className="bg-primary-light md:bg-gradient-primary-light w-full relative">
             <div className="w-full max-w-[1440px] mx-auto relative px-5 pt-[50px] md:pt-[146px] md:pb-[0px] pb-[120px]">
@@ -54,7 +54,6 @@ const BusinessSection = ({data}) => {
                         <VerticalText text={data.title_left} top={"top-[40%]"} />
                     )
                 }
-                <VerticalText text={"our business lines"} top={"top-[40%]"} />
                 <div className="grid flex-wrap max-w-[1045px] w-full mx-auto">
                     {cards.map((item, index) => {
                         return (

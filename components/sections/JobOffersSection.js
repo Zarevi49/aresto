@@ -3,65 +3,7 @@ import SliderSmallCard from "@/components/Slider/SliderSmallCard"
 import Image from "next/image"
 
 const JobOffersSection = ({data}) => {
-    const section_data = {
-        title: "Join the team.",
-        description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam",
-        link: {
-            title: "job offers",
-            link: "/job_offers"
-        },
-        cards: [
-            {
-                title: "Service",
-                image: {
-                    src: "/img/main_banner.svg",
-                    alt: "dsds"
-                },
-                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-            },
-            {
-                title: "Cuisine",
-                image: {
-                    src: "/img/image5.jpeg",
-                    alt: "dsds"
-                },
-                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-            },
-            {
-                title: "Management",
-                image: {
-                    src: "/img/image5.jpeg",
-                    alt: "dsds"
-                },
-                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-            },
-            {
-                title: "local",
-                image: {
-                    src: "/img/main_banner.svg",
-                    alt: "dsds"
-                },
-                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-            },
-            {
-                title: "eco-friendly",
-                image: {
-                    src: "/img/image5.jpeg",
-                    alt: "dsds"
-                },
-                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-            },
-            {
-                title: "independant",
-                image: {
-                    src: "/img/image5.jpeg",
-                    alt: "dsds"
-                },
-                description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-            },
-        ]
-    }
-    const cards = data ? data : section_data
+    const cards = data ? data : []
 
     return (
         <div className="relative mt-[130px] md:mt-[180px] px-5 pr-0 pb-[173px] md:pb-[75px] w-full max-w-[1440px]">

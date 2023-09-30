@@ -47,7 +47,7 @@ const SmallCard = ({
                         </div>
                     )}
                     {
-                        show_read_btn && (
+                        show_read_btn && description.length > 230 && (
                             show_read_more ? (
                                 <div className="underline cursor-pointer" onClick={read_more}>{t("read_more")}</div>
                             ) : (

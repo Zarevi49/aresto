@@ -2,13 +2,7 @@ import VerticalText from "@/components/VerticalText"
 import Image from "next/image"
 
 const MissionSection = ({data}) => {
-    const content_blocks = data.content.blocks.length ? data.content.blocks : props
-    const props = {
-        post: {
-            title: "To serve <span>delicious, healthy</span> and <span>eco-friendly</span> food",
-            text: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
-        }
-    }
+    const content_blocks = data.content && data.content?.blocks.length ? data.content.blocks : []
     return (
         <div className="w-full max-w-[1440px] mx-auto px-5 md:pt-[110px] pt-[58.5px] pb-[170px] md:pb-[84px] relative">
             {
@@ -17,7 +11,7 @@ const MissionSection = ({data}) => {
                 )
             }
             {
-                content_blocks.length && content_blocks.map((block) => {
+                content_blocks.map((block) => {
                     if (block.type === "header" && block.data.text) {
                         const Tag = `h${block.data.level}`
                         return (
@@ -29,7 +23,7 @@ const MissionSection = ({data}) => {
                     if (block.type === "paragraph" && block.data.text) {
                         return (
                             <div key={block.id} className="w-full max-w-[424px] mx-auto">
-                                <p className="text-[15px] font-light text-center">{block.data.text}</p>
+                                <p className="text-[15px] font-light text-center" dangerouslySetInnerHTML={ {__html: block.data.text} }></p>
                             </div>
                         )
                     }

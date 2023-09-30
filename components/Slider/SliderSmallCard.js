@@ -65,7 +65,7 @@ const SliderSmallCard = ({
                     }
                 </div>
             </SwiperSlide>
-            {slides.length && slides.map((item, index) => {
+            {slides.map((item, index) => {
                 return (
                     <SwiperSlide key={index}>
                         <SmallCard

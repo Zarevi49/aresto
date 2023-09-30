@@ -2,33 +2,7 @@ import SmallCard from "@/components/card/SmallCard";
 import VerticalText from "@/components/VerticalText";
 
 const SmallCardsSection = ({data}) => {
-    const cards_local = [
-        {
-            title: "local",
-            image: {
-                src: "/img/main_banner.svg",
-                alt: "dsds"
-            },
-            description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut n"
-        },
-        {
-            title: "eco-friendly",
-            image: {
-                src: "/img/image5.jpeg",
-                alt: "dsds"
-            },
-            description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren"
-        },
-        {
-            title: "independant",
-            image: {
-                src: "/img/image5.jpeg",
-                alt: "dsds"
-            },
-            description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren"
-        },
-    ]
-    const cards = data.cards.length ? data.cards : cards_local
+    const cards = data.cards.length ? data.cards : []
     return (
         <div className="bg-gradient-yellow md:bg-gradient-primary-yellow w-full py-[48.83px] md:py-[89.83px] mt-[82.14px] md:mt-[107.14px] relative">
             <div className="w-full max-w-[1440px] mx-auto relative">
@@ -37,11 +11,11 @@ const SmallCardsSection = ({data}) => {
                         <VerticalText text={data.title_left} top={"top-[40%]"} />
                     )
                 }
-                <div className="max-w-[1105px] px-5 mx-auto w-full flex-column md:flex">
+                <div className="max-w-[1105px] px-5 mx-auto w-full flex-wrap flex-column md:flex">
                     {
-                        cards.length && cards.map((item, index) => {
+                        cards.map((item, index) => {
                             return (
-                                <div className="max-w-[335px] mx-auto md:mx-2.5 mb-10 md:mb-0" key={index}>
+                                <div className="max-w-[335px] w-full mx-auto md:mx-2.5 mb-10 md:mb-0" key={index}>
                                     <SmallCard
                                         key={index}
                                         title={item.title}

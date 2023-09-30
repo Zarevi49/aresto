@@ -40,7 +40,7 @@ const Slider = ({
             breakpoints={breakpoints}
             autoplay={autoplay}
         >
-            {slides?.length && slides.map((item, index) => {
+            {slides.map((item, index) => {
                 return (
                     <SwiperSlide key={index} className="!h-auto">
                         <Image

@@ -11,7 +11,7 @@ const ServicesSection = ({data}) => {
             }
             <div className="max-w-[927px] w-full mx-auto">
                 {
-                    data.cards.length && data.cards.map((card) => (
+                    data.cards.map((card) => (
                         <Card data={card} key={card.id} />
                     ))
                 }
