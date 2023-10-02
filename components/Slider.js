@@ -1,13 +1,13 @@
 // import Swiper core and required modules
 "use client"
-import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import Image from "next/image"
 
 const Slider = ({

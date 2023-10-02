@@ -3,8 +3,8 @@ import BannerSection from "@/components/sections/BannerSection"
 import BusinessSection from "@/components/sections/BusinessSection"
 import CounterSection from "@/components/sections/CounterSection"
 import ContactFormSection from "@/components/sections/ContactFormSection"
-import SmallCardsSection from "@/components/sections/SmallCardsSection";
-import CertifiedSection from "@/components/sections/CertifiedSection";
+import SmallCardsSection from "@/components/sections/SmallCardsSection"
+import CertifiedSection from "@/components/sections/CertifiedSection"
 import JobOffersSection from "@/components/sections/JobOffersSection"
 import ServicesSection from "@/components/sections/ServicesSection"
 import Layout, {getGlobalSettings} from "@/components/Layout"
@@ -29,7 +29,7 @@ export async function getStaticProps({ locale }) {
             ],
             limit: 1,
         },
-    };
+    }
     const response = await Axios.get(`${DIRECTUS_API_ENDPOINT}/items/${COLLECTION_NAME}/`, requestConfig)
     const itemData = response.data.data
     const translation = itemData.translations.find(t => t.languages_code === locale)
@@ -39,7 +39,7 @@ export async function getStaticProps({ locale }) {
             item: translation,
             ...(await serverSideTranslations(locale, ["common"]))
         },
-    };
+    }
 
 }
 

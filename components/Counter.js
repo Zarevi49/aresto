@@ -6,7 +6,7 @@ function Counter({ value, text }) {
             </div>
             <div className="font-lato text-xs font-normal leading-150 tracking-[1.3px] mt-2 uppercase">{text}</div>
         </div>
-    );
+    )
 }
 
-export default Counter;
+export default Counter

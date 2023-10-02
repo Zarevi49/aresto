@@ -17,7 +17,7 @@ async function getStaticProps(slug) {
     if (!landingObjectData) {
         return {
             notFound:   true,
-        };
+        }
     }
     return landingObjectData
 }

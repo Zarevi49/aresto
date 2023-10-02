@@ -1,6 +1,6 @@
-import Button from "@/components/button/Button";
-import ButtonPhone from "@/components/button/ButtonPhone";
-import LanguageDropdown from "@/components/LanguageDropdown";
+import Button from "@/components/button/Button"
+import ButtonPhone from "@/components/button/ButtonPhone"
+import LanguageDropdown from "@/components/LanguageDropdown"
 import Link from "next/link"
 import Image from "next/image"
 import { useTranslation } from "next-i18next"

@@ -1,6 +1,6 @@
 function Button({ text, link, showArrow = false, accent = false}) {
     if (!link) {
-        return null;
+        return null
     }
 
     return (
@@ -13,7 +13,7 @@ function Button({ text, link, showArrow = false, accent = false}) {
                 </svg>
             )}
         </a>
-    );
+    )
 }
 
-export default Button;
+export default Button

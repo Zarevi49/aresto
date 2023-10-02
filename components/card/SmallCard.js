@@ -25,8 +25,8 @@ const SmallCard = ({
     }
 
     const read_less = () => {
-        setDisplayDescription(description.substring(0, 230-3) + '...');
-        setReadMore(true);
+        setDisplayDescription(description.substring(0, 230-3) + '...')
+        setReadMore(true)
     }
 
     return (

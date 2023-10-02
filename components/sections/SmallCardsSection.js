@@ -1,5 +1,5 @@
-import SmallCard from "@/components/card/SmallCard";
-import VerticalText from "@/components/VerticalText";
+import SmallCard from "@/components/card/SmallCard"
+import VerticalText from "@/components/VerticalText"
 
 const SmallCardsSection = ({data}) => {
     const cards = data.cards.length ? data.cards : []

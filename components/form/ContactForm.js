@@ -2,7 +2,7 @@ import CustomSelect from "./CustomSelect"
 import FormButton from '../button/FormButton'
 import Image from "next/image"
 import { useTranslation } from "next-i18next"
-import {useRef, useState} from "react"
+import {useState} from "react"
 
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 

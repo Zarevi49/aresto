@@ -51,7 +51,7 @@ function ContactInfo({ data }) {
                 )
             }
         </div>
-    );
+    )
 }
 
-export default ContactInfo;
+export default ContactInfo

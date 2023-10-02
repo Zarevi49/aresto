@@ -26,7 +26,7 @@ export async function getStaticProps({ params, locale }) {
         // Filter the translations based on the provided locale
         const translation = itemData.translations.find(t => t.languages_code === locale)
 
-        const global_settings = await getGlobalSettings(locale);
+        const global_settings = await getGlobalSettings(locale)
         return {
             props: {
                 item: translation,
