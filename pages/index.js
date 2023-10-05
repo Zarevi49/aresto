@@ -16,31 +16,35 @@ const COLLECTION_NAME = 'website_aresto_home_page'
 export async function getStaticProps({ locale }) {
     const global_settings = await getGlobalSettings(locale)
 
-    const requestConfig = {
-        params: {
-            fields: [
-                '*.*',
-                'translations.blocks.*',
-                'translations.blocks.item.*',
-                'translations.blocks.item.images.*',
-                'translations.blocks.item.cards.*',
-                'translations.blocks.item.cards.images.*',
-                'translations.blocks.item.video.*',
-            ],
-            limit: 1,
-        },
+    try {
+        const requestConfig = {
+            params: {
+                fields: [
+                    '*.*',
+                    'translations.blocks.*',
+                    'translations.blocks.item.*',
+                    'translations.blocks.item.images.*',
+                    'translations.blocks.item.cards.*',
+                    'translations.blocks.item.cards.images.*',
+                    'translations.blocks.item.video.*',
+                ],
+                limit: 1,
+            },
+        }
+        const response = await Axios.get(`${DIRECTUS_API_ENDPOINT}/items/${COLLECTION_NAME}/`, requestConfig)
+        const itemData = response.data.data
+        const translation = itemData.translations.find(t => t.languages_code === locale)
+        return {
+            props: {
+                global_settings,
+                item: translation,
+                ...(await serverSideTranslations(locale, ["common"]))
+            },
+        }
+    } catch (error) {
+        console.error("Error fetching data in getStaticProps:", error)
+        return { props: {}, notFound: true }
     }
-    const response = await Axios.get(`${DIRECTUS_API_ENDPOINT}/items/${COLLECTION_NAME}/`, requestConfig)
-    const itemData = response.data.data
-    const translation = itemData.translations.find(t => t.languages_code === locale)
-    return {
-        props: {
-            global_settings,
-            item: translation,
-            ...(await serverSideTranslations(locale, ["common"]))
-        },
-    }
-
 }
 
 export default function Home({global_settings, item}) {
